@@ -2,7 +2,7 @@
 In OUP dictionaries we are moving towards using RDF to manage our language data. This allows us to connect our highly-curated but previously isolated datasets, making explicit the richness of our data while taking advantage of everything linked data has to offer on the wider semantic web. This endpoint allows access to a subset of our data with SPARQL queries. The subset consists of a British English dictionary; full English morphology; bilingual senses from isiZulu-English, English-isiZulu, Northern Sotho-English, & English-Northern Sotho; partial morphologies of isiZulu & Northern Sotho; and finally, a restructured version of WordNet 3.0.
 
 ## Access
-The endpoint is not (yet) public. If you would like access, please send us an email to <leap@oup.com>.
+The endpoint is not (yet) public. If you would like access, please send us an email to ![LEAP Contact](images/contactdetails.png).
 
 ## SPARQL Specification
 SPARQL is a W3C standard and the spec can be found at: http://www.w3.org/TR/sparql11-query/
