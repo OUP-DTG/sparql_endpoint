@@ -281,7 +281,7 @@ We can go a step forward and examine the translation (in the following example `
 
 ### Extracting hypernyms, hyponyms, ... 
 
-The form in this model, can provide information regarding hypernym, hyponym, antonym, Holonym, and etc. A sample query for extracting such properties is:
+The form in this model can provide information regarding hypernymy, hyponymy, antonymy, holonymy, etc. A sample query for extracting such properties is:
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
