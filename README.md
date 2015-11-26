@@ -49,7 +49,7 @@ To discover the senses of a headword, we must first extract the lexical entry. T
 	select distinct ?word ?label ?lexicalEntry where {
 	    ?word a UpperOntology:Form.
 	    ?word rdfs:label ?l.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    bind (str(?l) as ?label )
 	    filter(?word= :book)
 	} 
@@ -60,15 +60,15 @@ Since there are various labels, some with languages assigned, we can bind the la
     PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-	select distinct ?word ?label ?lang ?lexCat where {
+	select distinct * where {
 	    ?word a UpperOntology:Form.
 	    ?word rdfs:label ?l.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+        ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLanguage ?lang.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory ?lexCat.
 	    bind (str(?l) as ?label )
 	    filter(?word= :book)
-	}
+	}limit 100
 	
 #### Extracting the inflections of a lexical entry
 If a headword contains inflections, they are attached to the lexical entry:
@@ -77,9 +77,8 @@ If a headword contains inflections, they are attached to the lexical entry:
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select distinct ?inflection where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
 	    ?lexicalEntry UpperOntology:hasInflection ?inflection.
 	
 	    filter(?word= :book)
@@ -90,9 +89,9 @@ Pronunciation is also attached to the lexical entry, and provides information ab
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct * where {
+	select distinct ?word ?phonetic_notation ?phonetic_spelling where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasPronunciationID ?pronunciationID.
 	    ?pronunciationID UpperOntology:hasPhoneticsNotation ?phonetic_notation.
 	    ?pronunciationID UpperOntology:hasPhoneticSpelling ?phonetic_spelling.
@@ -105,34 +104,39 @@ Domain information is a context and can be used for disambiguation.
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct *  where {
+	select distinct ?word ?domain  where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasSense ?sense.
 	    ?sense UpperOntology:hasDomain ?domain.
 	
 	    filter(?word= :book)
-	} 
+	}  
     
 ### Extracting senses of a headword
 The sense of a headword can provide more detailed information. For example, region (e.g. GB, US, ...), definition, simple definition (extracted from a bilingual dictionary), translation, example, etc. Some of these properties might be empty, due to insufficient data, or not being applicable (e.g. senses might not have region).
 
-    	PREFIX : <http://languagehub.oup.com/>
+	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-	select distinct ?word ?label ?region where {
+	select distinct ?word ?label ?region  where {
 	    ?word a UpperOntology:Form.
-	    ?word rdfs:label ?l.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
-	    optional{
+    	?word rdfs:label ?l.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasSense ?sense.
+	    ?sense UpperOntology:hasDomain ?domain.
+    	optional{
 	        ?sense UpperOntology:hasRegion ?region.
 	    }
 	
 	    bind (str(?l) as ?label )
+	
 	    filter(?word= :book)
-	}  
+	}   
 
 ![Regions of book](/images/region.jpg)
 
@@ -142,11 +146,13 @@ If you just are looking for the primary sense:
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 	select distinct *  where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?lexicalEntry UpperOntology:hasPrimarySense ?sense.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
 	
 	    filter(?word= :book)
 	} 
@@ -158,26 +164,31 @@ Register specifies the social setting in which a headword can be used.
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct *  where {
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	select distinct ?word ?register  where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
-	    ?sense UpperOntology:hasRegister ?register.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
+    	?sense UpperOntology:hasRegister ?register.
 	
 	    filter(?word= :dad)
-	} limit 100
+	} 
  
 
 #### Sense definitions and examples
 The following query shows the various definitions of `book`, and examples for these definitions, or simply examples of the headword.
 
-    PREFIX : <http://languagehub.oup.com/>
+	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct ?word ?definition ?example  where {
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	select distinct *  where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
 	    optional{
 	        ?sense UpperOntology:hasDefinition ?definition.
 	    }
@@ -193,30 +204,29 @@ We can extract translations of a specific word in as many languages as the data 
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct * where {
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	select distinct *  where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
-	    ?sense UpperOntology:hasTranslation ?translation.
+    	?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
+		?sense UpperOntology:hasTranslation ?translation.
 	    ?translation UpperOntology:hasLanguage ?target_lang.
-	
+
 	    filter(?word= :book)
 	} 
 	
 #### Related headwords to the sense
-The endpoint is able to display related terms to a specified headword. For example, `back` with lexical category `verb`, has a related term `veer`.
+The endpoint is able to display related terms to a specified headword. For example, `absoluteness` has a related term `absolute`.
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	select distinct ?word ?related_words where {
-	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
-	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:verb.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
-	    ?sense UpperOntology:isRelatedTo ?related_words.
+	select distinct * where {
+      	?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:isRelatedTo ?related_words.
 	
-	    filter(?word= :back)
+	    filter(?word= :absolute)
 	}  limit 100
 
 
@@ -228,7 +238,7 @@ Some headwords may contain information about the root of the word, the date of o
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select distinct * where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Verb.
 	    ?lexicalEntry UpperOntology:hasEtymology ?etymology.
 	    optional{
@@ -248,34 +258,36 @@ We can easily get a translation of a word by examining the sense of a specified 
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select distinct * where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
-	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:noun.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
+	    ?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
 	    ?sense UpperOntology:hasTranslation ?translation.
         ?translation UpperOntology:hasLanguage ?target_lang.
 	
 	    filter(?word= :ibhuku)
 	}  limit 100
 	
-We can go a step forward and examine the translation (in the following example `?translation`), and see if we can extract translations between two languages for which don't have a bilingual dictionary. The following query will takes the isiZulu `ibhuku`, finds the translation in English (`book`), and from there finds the translation into Northern Sotho.
+We can go a step forward and examine the translation (in the following example `?translation`), and see if we can extract translations between two languages for which don't have a bilingual dictionary. The following query will takes the isiZulu `ibhuku`, finds the translation in English (`book`), and from there finds the translation into Northern Sotho and Spanish.
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select distinct * where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
-	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:noun.
-	    ?lexicalEntry UpperOntology:hasLanguage ?s_lang.
-	    ?lexicalEntry UpperOntology:hasSense ?sense.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
+	    ?lexicalEntry UpperOntology:hasEntryID ?entryID.
+	    ?entryID UpperOntology:hasPrimarySense ?sense.
 	    ?sense UpperOntology:hasTranslation ?translation1.
-	    ?translation1 UpperOntology:isTranslationOf ?t_sense.
-	    ?lexicalEntry2 UpperOntology:hasSense ?t_sense.
+	    ?t_sense UpperOntology:hasTranslation ?translation1.
+	    ?entryID2 UpperOntology:hasPrimarySense ?t_sense.
+    	?lexicalEntry2 UpperOntology:hasEntryID ?entryID2 .
 	    ?lexicalEntry2 UpperOntology:hasCanonicalForm ?can_form.
-	    ?lexicalEntry2 UpperOntology:hasLexicalCategory UpperOntology:noun.
+	    ?lexicalEntry2 UpperOntology:hasLexicalCategory UpperOntology:Noun.
 	    ?lexicalEntry2 UpperOntology:hasLanguage ?target_lang.
 	
-	    filter((?word= :ibhuku) && (?s_lang != ?target_lang) )
-	}
+	    filter(?word= :ibhuku && (?word != ?can_form))
+	}  limit 100
 	
 ![Cross translation](/images/translations.jpg)
 
@@ -289,7 +301,7 @@ The form in this model can provide information regarding hypernymy, hyponymy, an
 	    ?word a UpperOntology:Form.
 	    ?word UpperOntology:hasAntonym ?antonym.
 	
-	    filter(?word= :better)
+	    filter(?word= :omit )
 	} limit 100
 	
 An example for extracting entailments: 
@@ -300,7 +312,7 @@ An example for extracting entailments:
 	    ?word a UpperOntology:Form.
 	    ?word UpperOntology:hasEntailment ?entail.
 	
-	    filter(?word= :look)
+	    filter(?word= :note)
 	} limit 100
 	
 ### Extracting inflected forms
@@ -310,19 +322,21 @@ Lexical Entry might provide information regarding the inflected forms of a headw
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select * where {
 	    ?word a UpperOntology:Form.
-	    ?word UpperOntology:isLexicalFormOf ?lexicalEntry.
+	    ?lexicalEntry UpperOntology:hasCanonicalForm ?word.
 	    ?lexicalEntry UpperOntology:hasInflection ?inflection.
 
 	    filter(?word= :run)
 	}  limit 100
 
 ### Extracting (limited) syntactic information
-There is a limited amount of syntactic information regarding senses of headwords:
+There is a limited amount of syntactic information regarding the inflected form of headwords:
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
 	select * where {
 	    ?word a UpperOntology:Form.
+    	?lexicalEntry UpperOntology:hasCanonicalForm ?word.
+	    ?lexicalEntry UpperOntology:hasInflection ?inflection.
 	    optional{
 	        ?word UpperOntology:hasPerson ?person.
 	    }
@@ -332,6 +346,9 @@ There is a limited amount of syntactic information regarding senses of headwords
 	    optional{
 	        ?word UpperOntology:hasNumber ?number.
 	    }
+    
+    
+	    filter(?word= :run)
 	
 	}  limit 100
 	
@@ -341,25 +358,17 @@ The current endpoint only contains hypernym information about English. Since we 
 
 	PREFIX : <http://languagehub.oup.com/>
 	PREFIX UpperOntology: <http://languagehub.oup.com/UpperOntology/>
-	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-	select distinct (str(?label) as ?hyper) (group_concat(distinct ?t_label ; separator = " -- ") AS ?hypo) 		where {
+	select distinct *	where {
 	    ?word a UpperOntology:Form.
 	    ?word UpperOntology:hasHypernym ?hypernym. 
+   		?h_lexEntry UpperOntology:hasCanonicalForm ?hypernym.
+        ?h_lexEntry UpperOntology:hasNumber UpperOntology:singular.
+        ?h_lexEntry UpperOntology:hasEntryID ?entryID.
+        ?h_lexEntry UpperOntology:hasLanguage ?lang.
+        ?entryID UpperOntology:hasPrimarySense ?sense.
+	    ?sense UpperOntology:hasTranslation ?h_translation.
+      ?h_translation UpperOntology:hasLanguage ?t_lang.
+
 	
-	    ?hypernym UpperOntology:hasNumber UpperOntology:singular.
-	    ?hypernym UpperOntology:hasTranslation ?h_translation.
-	    ?h_lexEntry UpperOntology:hasSense  ?h_translation.
-	    ?h_lexEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?h_lexEntry UpperOntology:hasLanguage UpperOntology:zu.
-	    ?h_word UpperOntology:isCanonicalFormOf ?h_lexEntry.
-	        ?h_word rdfs:label ?label.
-	
-	    ?word UpperOntology:isCanonicalFormOf ?lexEntry.
-	    ?lexEntry UpperOntology:hasSense ?sense.
-	    ?lexEntry UpperOntology:hasLexicalCategory UpperOntology:Noun.
-	    ?sense UpperOntology:hasTranslation ?t_word. 
-	    ?t_word UpperOntology:hasLanguage UpperOntology:zu.
-	    ?t_word rdfs:label ?t_label
-	
-	    filter((?word= :book) )
-	} group by ?label
+	    filter((?hypernym= :lava) && (?lang!=?t_lang) )
+	} 
