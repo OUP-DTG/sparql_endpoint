@@ -1,0 +1,3408 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontology "http://languagehub.oup.com/ontology/" >
+    <!ENTITY OntoMorph "http://languagehub.oup.com/OntoMorph/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology="http://languagehub.oup.com/ontology/"
+     xmlns:OntoMorph="http://languagehub.oup.com/OntoMorph/">
+    <Ontology rdf:about="http://languagehub.oup.com/OntoMorph">
+        <versionIRI rdf:resource="&OntoMorph;0.1"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/languageSpecific -->
+
+    <AnnotationProperty rdf:about="&OntoMorph;languageSpecific">
+        <rdfs:comment>Specific to a certaiin language.</rdfs:comment>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasAdjectiveFunction -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasAdjectiveFunction">
+        <rdfs:label xml:lang="en">has Adjective Function</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasAktionsart -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasAktionsart">
+        <rdfs:label xml:lang="en">has Aktionsart</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasAspect -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasAspect">
+        <rdfs:label xml:lang="en">has Aspect</rdfs:label>
+        <rdfs:comment xml:lang="en">Category associated to verbs and referring to the way the grammar marks the duration or type of temporal activity.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#aspect</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasAspectDuration -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasAspectDuration">
+        <rdfs:label xml:lang="en">has Aspect Duration</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasAspectTelicity -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasAspectTelicity">
+        <rdfs:label xml:lang="en">has Aspect Telicity</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasBaseMorpheme -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasBaseMorpheme">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasBoundMorpheme -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasBoundMorpheme">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasCase -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasCase">
+        <rdfs:label xml:lang="en">has Case</rdfs:label>
+        <rdfs:comment xml:lang="en">In a given sentence, the way in which the form of a word changes in order to express a relationship with one or several words of the sentence. The morphological modification may apply to nouns, pronouns noun phrase constituents, such as adjectives or numerals.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#case</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasClassifier -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasClassifier">
+        <rdfs:label xml:lang="en">has Classifier</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasClitic -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasClitic">
+        <rdfs:label xml:lang="en">has Clitic</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasCollectiveness -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasCollectiveness">
+        <rdfs:label xml:lang="en">has Collectiveness</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasConcord -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasConcord">
+        <rdfs:label xml:lang="en">has Concord</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasContraction -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasContraction">
+        <rdfs:label xml:lang="en">has Contraction</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasCountability -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasCountability">
+        <rdfs:label xml:lang="en">has Countability</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasDefiniteness -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasDefiniteness">
+        <rdfs:label xml:lang="en">has Definiteness</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasDegree -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasDegree">
+        <rdfs:label xml:lang="en">has Degree</rdfs:label>
+        <rdfs:comment xml:lang="en">Property concerning comparison.</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.lexinfo.net/ontology/2.0/lexinfo#degree</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasDerivationalMorpheme -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasDerivationalMorpheme">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasEntityType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasEntityType">
+        <rdfs:label xml:lang="en">has Entity Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasEventModality -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasEventModality">
+        <rdfs:label xml:lang="en">has Event Modality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasEvidentiality -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasEvidentiality">
+        <rdfs:label xml:lang="en">has Evidentiality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasFreeMorpheme -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasFreeMorpheme">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasGender -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasGender">
+        <rdfs:label xml:lang="en">has Gender</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#gender</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A grammatical category that indicates grammatical relationships between words in sentences.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasIdeophone -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasIdeophone">
+        <rdfs:label xml:lang="en">has Ideophone</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasIdiomatic -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasIdiomatic">
+        <rdfs:label xml:lang="en">has Idiomatic</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasInflectionType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasInflectionType">
+        <rdfs:label xml:lang="en">has Inflection Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasInflectionalMorpheme -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasInflectionalMorpheme">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasMarkerType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasMarkerType">
+        <rdfs:label xml:lang="en">has Marker Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasModality -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasModality">
+        <rdfs:label xml:lang="en">has Modality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasMood -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasMood">
+        <rdfs:label xml:lang="en">has Mood</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasNonFinType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasNonFinType">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasNonFiniteness -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasNonFiniteness">
+        <rdfs:label xml:lang="en">has Non Finiteness</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasNounClass -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasNounClass">
+        <rdfs:label xml:lang="en">has Noun Class</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasNumber -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasNumber">
+        <rdfs:label xml:lang="en">has Number</rdfs:label>
+        <rdfs:comment xml:lang="en">Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#number</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasNumeral -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasNumeral">
+        <rdfs:label xml:lang="en">has Numeral</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPerson -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPerson">
+        <rdfs:label xml:lang="en">has Person</rdfs:label>
+        <rdfs:comment xml:lang="en">Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#person </rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPolarity -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPolarity">
+        <rdfs:label xml:lang="en">has Polarity</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPreferredGender -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPreferredGender">
+        <rdfs:subPropertyOf rdf:resource="&OntoMorph;hasGender"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPronominal -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPronominal">
+        <rdfs:label xml:lang="en">has Pronominal</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPronounFunction -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPronounFunction">
+        <rdfs:label xml:lang="en">has Pronoun Function</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasPronounScope -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasPronounScope">
+        <rdfs:label xml:lang="en">has Pronoun Scope</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasProperness -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasProperness">
+        <rdfs:label xml:lang="en">has Properness</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasReferential -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasReferential">
+        <rdfs:label xml:lang="en">has Referential</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasResidual -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasResidual">
+        <rdfs:label xml:lang="en">has Residual</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasSentenceModality -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasSentenceModality">
+        <rdfs:label xml:lang="en">has Sentence Modality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasStemVowel -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasStemVowel">
+        <rdfs:label xml:lang="en">has Stem Vowel</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasStructuralRelation -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasStructuralRelation">
+        <rdfs:label xml:lang="en">has Structural Relation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasSubcategorization -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasSubcategorization">
+        <rdfs:label xml:lang="en">has Subcategorization</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasTense -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasTense">
+        <rdfs:label xml:lang="en">has Tense</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#tense </rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Property referring to the way the grammar marks the time at which the action denoted by the verb took place.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasThematicRole -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasThematicRole">
+        <rdfs:label xml:lang="en">has Thematic Role</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasUnitStructure -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasUnitStructure">
+        <rdfs:label xml:lang="en">has Unit Structure</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasVariantType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasVariantType">
+        <rdfs:label xml:lang="en">has Variant Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasVerbForm -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasVerbForm">
+        <rdfs:label xml:lang="en">has Verb Form</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasVerbType -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasVerbType">
+        <rdfs:label xml:lang="en">has Verb Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/hasVoice -->
+
+    <ObjectProperty rdf:about="&OntoMorph;hasVoice">
+        <rdfs:label xml:lang="en">has Voice</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.lexinfo.net/ontology/2.0/lexinfo#voice</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasGrammaticalFeature">
+        <rdfs:label xml:lang="en">has Grammatical Feature</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLexicalCategory -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLexicalCategory"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSyntacticStructure -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Abbreviation -->
+
+    <Class rdf:about="&OntoMorph;Abbreviation">
+        <rdfs:label xml:lang="en">Abbreviation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ResidualType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Ablative -->
+
+    <Class rdf:about="&OntoMorph;Ablative">
+        <rdfs:label xml:lang="en">Ablative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Absolute -->
+
+    <Class rdf:about="&OntoMorph;Absolute">
+        <rdfs:label xml:lang="en">Absolute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronounFunctionType"/>
+        <rdfs:comment xml:lang="en">The form has only pronominal use (e.g., English theirs)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Accomplishment -->
+
+    <Class rdf:about="&OntoMorph;Accomplishment">
+        <rdfs:label xml:lang="en">Accomplishment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AktionsartType"/>
+        <rdfs:comment xml:lang="en">Denoting an event that has duration (see Aspect Duration Type section) and is telic (see Aspect telicity Type section).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Accusative -->
+
+    <Class rdf:about="&OntoMorph;Accusative">
+        <rdfs:label xml:lang="en">Accusative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Achievement -->
+
+    <Class rdf:about="&OntoMorph;Achievement">
+        <rdfs:label xml:lang="en">Achievement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AktionsartType"/>
+        <rdfs:comment xml:lang="en">Denoting an event that has no duration (see Aspect Duration Type section) and is telic (see Aspect telicity Type section).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Active -->
+
+    <Class rdf:about="&OntoMorph;Active">
+        <rdfs:label>Active</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VoiceType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Activity -->
+
+    <Class rdf:about="&OntoMorph;Activity">
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AktionsartType"/>
+        <rdfs:comment xml:lang="en">Denoting an event that has duration (see Aspect Duration Type section) and is atelic (see Aspect telicity Type section).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/AdjectiveFunctionType -->
+
+    <Class rdf:about="&OntoMorph;AdjectiveFunctionType">
+        <rdfs:label xml:lang="en">Adjective Function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Describing the position and behaviour of adjectives.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/AktionsartType -->
+
+    <Class rdf:about="&OntoMorph;AktionsartType">
+        <rdfs:label xml:lang="en">Aktionsart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinctions of lexical aspect.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Aspect -->
+
+    <Class rdf:about="&OntoMorph;Aspect">
+        <rdfs:label xml:lang="en">Aspect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of aspect.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/AspectDurationType -->
+
+    <Class rdf:about="&OntoMorph;AspectDurationType">
+        <rdfs:label xml:lang="en">Aspect Duration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinctions of duration concerning lexical aspect (aka aktionsart).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/AspectTelicityType -->
+
+    <Class rdf:about="&OntoMorph;AspectTelicityType">
+        <rdfs:label xml:lang="en">Aspect Telicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/AspectType -->
+
+    <Class rdf:about="&OntoMorph;AspectType">
+        <rdfs:label xml:lang="en">Aspect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">a grammatical category that expresses how an action, event or state, denoted by a verb, relates to the flow of time.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Aspect</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Associative -->
+
+    <Class rdf:about="&OntoMorph;Associative">
+        <rdfs:label xml:lang="en">Associative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Assumed -->
+
+    <Class rdf:about="&OntoMorph;Assumed">
+        <rdfs:label xml:lang="en">Assumed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Atelic -->
+
+    <Class rdf:about="&OntoMorph;Atelic">
+        <rdfs:label xml:lang="en">Atelic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectTelicityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Attributive -->
+
+    <Class rdf:about="&OntoMorph;Attributive">
+        <rdfs:label xml:lang="en">Attributive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AdjectiveFunctionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Auxiliary -->
+
+    <Class rdf:about="&OntoMorph;Auxiliary">
+        <rdfs:label>Auxiliary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/BaseMorpheme -->
+
+    <Class rdf:about="&OntoMorph;BaseMorpheme">
+        <rdfs:label xml:lang="en">Base Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Morpheme"/>
+        <rdfs:comment xml:lang="en">A &quot;base,&quot; or &quot;root&quot; is a morpheme in a word that gives the word its principle meaning. An example of a &quot;free base&quot; morpheme is woman in the word womanly.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Bitransitive -->
+
+    <Class rdf:about="&OntoMorph;Bitransitive">
+        <rdfs:label xml:lang="en">Bitransitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/BoundMorpheme -->
+
+    <Class rdf:about="&OntoMorph;BoundMorpheme">
+        <rdfs:label xml:lang="en">Bound Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Morpheme"/>
+        <rdfs:comment xml:lang="en">a sound or a combination of sounds that cannot stand alone as a word.  The s in cats is a bound morpheme, and it does not have any meaning without the free morpheme cat.</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/BoundMorpheme</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Cardinal -->
+
+    <Class rdf:about="&OntoMorph;Cardinal">
+        <rdfs:label xml:lang="en">Cardinal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumeralType"/>
+        <rdfs:comment xml:lang="en">A number form used in counting to indicate quantity (e.g., one, two).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Case -->
+
+    <Class rdf:about="&OntoMorph;Case">
+        <rdfs:label xml:lang="en">Case</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of case. This feature can be complemented with information from the case classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/CaseType -->
+
+    <Class rdf:about="&OntoMorph;CaseType">
+        <rdfs:label xml:lang="en">Case</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">a grammatical category whose value reflects the grammatical function performed by a noun or pronoun in a phrase, clause, or sentence.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Case</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class1 -->
+
+    <Class rdf:about="&OntoMorph;Class1">
+        <rdfs:label xml:lang="en">class 1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">The Bantu noun class one is associated with humans and other animates. A  regular singular form of class 2, a combination commonly referred to as class 1/2 or gender 1 or animates by other Bantuist (Cobertt 1991 and Katamba 2003).</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class1</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class10 -->
+
+    <Class rdf:about="&OntoMorph;Class10">
+        <rdfs:label xml:lang="en">class 10</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class10</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Bantu noun class denoting animals, tools, instruments and house hold effects. Has  noun class 9 as a regular singular.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class11 -->
+
+    <Class rdf:about="&OntoMorph;Class11">
+        <rdfs:label xml:lang="en">class 11</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Bantu noun class for inanimates, long thin objects, languages, body parts and natural phenomena. Has class 10 as a regular  plural.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class11</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class12 -->
+
+    <Class rdf:about="&OntoMorph;Class12">
+        <rdfs:label xml:lang="en">class 12</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">has to do with diminutives, derogatives and augmentatives of objects. Regularly  takes nc 13 as plural.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class12</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class13 -->
+
+    <Class rdf:about="&OntoMorph;Class13">
+        <rdfs:label xml:lang="en">class 13</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class13</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">regular plural of nc 12</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class14 -->
+
+    <Class rdf:about="&OntoMorph;Class14">
+        <rdfs:label xml:lang="en">class 14</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class14</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Bantu noun class for abstract nouns  and collectives. (e.g., ubuhle &apos;beauty&apos;). doesn&apos;t have a plural  in e.g., isiZulu, but can have one in others (e.g., in chichewa it has class6 as plural)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class15 -->
+
+    <Class rdf:about="&OntoMorph;Class15">
+        <rdfs:label xml:lang="en">class 15</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">class of Infinitives and body parts.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class15</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class16 -->
+
+    <Class rdf:about="&OntoMorph;Class16">
+        <rdfs:label xml:lang="en">class 16</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class16</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">This class is a locative with no plural form. 
+(e.g. pamsika: &apos;round&apos; the market)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class17 -->
+
+    <Class rdf:about="&OntoMorph;Class17">
+        <rdfs:label xml:lang="en">class 17</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class17</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">This class is locative with no plural form.
+(e.g. kumsika: &apos;at&apos; the market)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class18 -->
+
+    <Class rdf:about="&OntoMorph;Class18">
+        <rdfs:label xml:lang="en">class 18</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">This class is locative with no plural form.
+(e.g. mumsika &apos;in&apos; the market)</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class18</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class19 -->
+
+    <Class rdf:about="&OntoMorph;Class19">
+        <rdfs:label xml:lang="en">class 19</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Class for dimunitives.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class19</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class1a -->
+
+    <Class rdf:about="&OntoMorph;Class1a">
+        <rdfs:label xml:lang="en">class 1a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Bantu noun class also for people, but others that go in nc 1 such as proper names, personification, kinship terms and personifications.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class1a</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class2 -->
+
+    <Class rdf:about="&OntoMorph;Class2">
+        <rdfs:label xml:lang="en">class 2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">A regular plural form of class 1, which together forms class 1/2</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class2</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class20 -->
+
+    <Class rdf:about="&OntoMorph;Class20">
+        <rdfs:label xml:lang="en">class 20</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class20</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">class of derogatives, augmentatives, ameliorative and mannerism.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class21 -->
+
+    <Class rdf:about="&OntoMorph;Class21">
+        <rdfs:label xml:lang="en">class 21</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class21</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">class of augmentatives and derogatives.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class22 -->
+
+    <Class rdf:about="&OntoMorph;Class22">
+        <rdfs:label xml:lang="en">class 22</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class22</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">plural of class 20.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class23 -->
+
+    <Class rdf:about="&OntoMorph;Class23">
+        <rdfs:label xml:lang="en">class 23</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">class for locative terms.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class23</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class2a -->
+
+    <Class rdf:about="&OntoMorph;Class2a">
+        <rdfs:label xml:lang="en">class 2a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">This class is the plural form of some elements in class 1, 1a , and 3a. This class is not available in some Bantu languages.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class2a</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class2b -->
+
+    <Class rdf:about="&OntoMorph;Class2b">
+        <rdfs:label xml:lang="en">class 2b</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class2b</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Regular plural of class 1a.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class3 -->
+
+    <Class rdf:about="&OntoMorph;Class3">
+        <rdfs:label xml:lang="en">class 3</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">The Bantu noun class 3, associated with trees, plants, non-paired body parts. class 4 is a regular plural for the class.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class3</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class3a -->
+
+    <Class rdf:about="&OntoMorph;Class3a">
+        <rdfs:label xml:lang="en">class 3a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Bantu nounclass for nonhuman entities. takes 2a as plural</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class3a</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class4 -->
+
+    <Class rdf:about="&OntoMorph;Class4">
+        <rdfs:label xml:lang="en">class 4</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class4</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A regular plural of class 3, which together make class 3/4 in other Bantuist classifications (Cobertt,1991)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class5 -->
+
+    <Class rdf:about="&OntoMorph;Class5">
+        <rdfs:label xml:lang="en">class 5</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Bantu noun class for entities that have something to do with fruits, paired body parts, and natural phenomena. class 6 is  as a plural class.</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class5</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class6 -->
+
+    <Class rdf:about="&OntoMorph;Class6">
+        <rdfs:label xml:lang="en">class 6</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class6</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">plural of Class 5 or Class 14, making pairs class 5/6 or class 14/6.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class7 -->
+
+    <Class rdf:about="&OntoMorph;Class7">
+        <rdfs:label xml:lang="en">class 7</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class7</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Bantu nounclass for nouns that denote entities that have something to do with inanimates,  manner/style, insects , languages, diseases tools and outstanding people. Has class 8 as a regular plural.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class8 -->
+
+    <Class rdf:about="&OntoMorph;Class8">
+        <rdfs:label xml:lang="en">class 8</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class8</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">regular plural of class7, which together form a pair class 7/8 for other classifications.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class9 -->
+
+    <Class rdf:about="&OntoMorph;Class9">
+        <rdfs:label xml:lang="en">class 9</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class9</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Bantu noun class for nouns of entities that are nonhuman. tools, instruments and house hold effects . takes 6 as plural</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Class9a -->
+
+    <Class rdf:about="&OntoMorph;Class9a">
+        <rdfs:label xml:lang="en">class 9a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl#Class9a</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">nonhuman objects</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassGa -->
+
+    <Class rdf:about="&OntoMorph;ClassGa">
+        <rdfs:label xml:lang="en">Class ga</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">In the Northern Sotho dictionary there is a class 24 or ga-class. (Oxford University Press)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassI -->
+
+    <Class rdf:about="&OntoMorph;ClassI">
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassII -->
+
+    <Class rdf:about="&OntoMorph;ClassII">
+        <rdfs:label xml:lang="en">Class II</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassIII -->
+
+    <Class rdf:about="&OntoMorph;ClassIII">
+        <rdfs:label xml:lang="en">Class III</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassIV -->
+
+    <Class rdf:about="&OntoMorph;ClassIV">
+        <rdfs:label xml:lang="en">Class IV</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassIX -->
+
+    <Class rdf:about="&OntoMorph;ClassIX">
+        <rdfs:label xml:lang="en">Class IX</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassN -->
+
+    <Class rdf:about="&OntoMorph;ClassN">
+        <rdfs:label xml:lang="en">Class N</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">In the Northern Sotho dictionary there is an N-Class (Oxford University Press)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassV -->
+
+    <Class rdf:about="&OntoMorph;ClassV">
+        <rdfs:label xml:lang="en">Class V</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassVI -->
+
+    <Class rdf:about="&OntoMorph;ClassVI">
+        <rdfs:label xml:lang="en">Class VI</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassVII -->
+
+    <Class rdf:about="&OntoMorph;ClassVII">
+        <rdfs:label xml:lang="en">Class VII</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassVIII -->
+
+    <Class rdf:about="&OntoMorph;ClassVIII">
+        <rdfs:label xml:lang="en">Class VIII</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassX -->
+
+    <Class rdf:about="&OntoMorph;ClassX">
+        <rdfs:label xml:lang="en">Class X</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassXI -->
+
+    <Class rdf:about="&OntoMorph;ClassXI">
+        <rdfs:label xml:lang="en">Class XI</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassXII -->
+
+    <Class rdf:about="&OntoMorph;ClassXII">
+        <rdfs:label xml:lang="en">Class XII</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbFormType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Classifier -->
+
+    <Class rdf:about="&OntoMorph;Classifier">
+        <rdfs:label xml:lang="en">Classifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers (generally affixes) used to accompany nouns and to classify them depending on the type of their referent. Especially present in East Asian languages, such as Chinese and Japanese. This feature can be complemented with information on &quot;classifier type&quot;.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ClassifierType -->
+
+    <Class rdf:about="&OntoMorph;ClassifierType">
+        <rdfs:label xml:lang="en">Classifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifiers are affixes (prefixes, etc.) or other type of particles that accompany a noun. They are considered to classify the noun based on the type of entity the latter denotes.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Clause -->
+
+    <Class rdf:about="&OntoMorph;Clause">
+        <rdfs:label xml:lang="en">Clause</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;UnitStructureType"/>
+        <rdfs:comment xml:lang="en">Clausal unit.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Clitic -->
+
+    <Class rdf:about="&OntoMorph;Clitic">
+        <rdfs:label xml:lang="en">Clitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CliticType"/>
+        <rdfs:comment xml:lang="en">Underspecified case if no more information is provided.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/CliticType -->
+
+    <Class rdf:about="&OntoMorph;CliticType">
+        <rdfs:label xml:lang="en">Clitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Clitics are morphemes that have the syntactic characteristics of a word (they are syntactically independent and belong to a POS class like verb, pronoun, etc.), but which, by contrast, are phonologically dependent on another word. For example, the contracted forms of English auxiliary verbs in you&apos;re, I&apos;ll. They can be subclassiffied based on their position with respect to the word they depend on.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Collective -->
+
+    <Class rdf:about="&OntoMorph;Collective">
+        <rdfs:label xml:lang="en">Collective</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CollectivenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/CollectivenessType -->
+
+    <Class rdf:about="&OntoMorph;CollectivenessType">
+        <rdfs:label xml:lang="en">Collectiveness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinguishing between collective and non-collective references. In language such as Arabic, collective nouns are a particular category of nouns which behave in a particular manner. Collectiveness should not be mistaken by a value of category number since collective nouns can be used in singular, dual, and plural.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Common -->
+
+    <Class rdf:about="&OntoMorph;Common">
+        <rdfs:label xml:lang="en">Common</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;GenderType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PropernessType"/>
+        <rdfs:comment xml:lang="en">For Slavic languages, which present a two-fold gender distinction and classify nouns as either common or neuter.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/CommonSaying -->
+
+    <Class rdf:about="&OntoMorph;CommonSaying">
+        <rdfs:label xml:lang="en">Common Saying</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdiomaticType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Comparative -->
+
+    <Class rdf:about="&OntoMorph;Comparative">
+        <rdfs:label xml:lang="en">Comparative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DegreeType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Compound -->
+
+    <Class rdf:about="&OntoMorph;Compound">
+        <rdfs:label xml:lang="en">Compound</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;UnitStructureType"/>
+        <rdfs:comment xml:lang="en">Compound unit.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Concord -->
+
+    <Class rdf:about="&OntoMorph;Concord">
+        <rdfs:label xml:lang="en">Concord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of concord, for example those present in Bantu languages. This feature can be complemented with information on concord type.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ConcordType -->
+
+    <Class rdf:about="&OntoMorph;ConcordType">
+        <rdfs:label xml:lang="en">Concord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Indicating the type of concord expressed by a concord affix (circumfix, infix, prefix, suffix). Very characteristic of Bantu languages.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Conditional -->
+
+    <Class rdf:about="&OntoMorph;Conditional">
+        <rdfs:label xml:lang="en">Conditional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MoodType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ContractionType -->
+
+    <Class rdf:about="&OntoMorph;ContractionType">
+        <rdfs:label xml:lang="en">Contraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Indicating the type of contraction.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Coordination -->
+
+    <Class rdf:about="&OntoMorph;Coordination">
+        <rdfs:label xml:lang="en">Coordination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StructuralRelationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Copulative -->
+
+    <Class rdf:about="&OntoMorph;Copulative">
+        <rdfs:label xml:lang="en">Copulative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/CountabilityType -->
+
+    <Class rdf:about="&OntoMorph;CountabilityType">
+        <rdfs:label xml:lang="en">Countability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinguishing between countable and non-countable references.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Countable -->
+
+    <Class rdf:about="&OntoMorph;Countable">
+        <rdfs:label xml:lang="en">Countable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CountabilityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Dative -->
+
+    <Class rdf:about="&OntoMorph;Dative">
+        <rdfs:label xml:lang="en">Dative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Declarative -->
+
+    <Class rdf:about="&OntoMorph;Declarative">
+        <rdfs:label xml:lang="en">Declarative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SentenceModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/DefinitenessType -->
+
+    <Class rdf:about="&OntoMorph;DefinitenessType">
+        <rdfs:label xml:lang="en">Definiteness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifies nominal specifiers (articles, determiners) or pronouns regarding their definiteness properties: definite, indefinite.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Definitive -->
+
+    <Class rdf:about="&OntoMorph;Definitive">
+        <rdfs:label xml:lang="en">Definitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DefinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Degree -->
+
+    <Class rdf:about="&OntoMorph;Degree">
+        <rdfs:label xml:lang="en">Degree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of degree. This feature can be complemented with information on degree.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/DegreeType -->
+
+    <Class rdf:about="&OntoMorph;DegreeType">
+        <rdfs:label xml:lang="en">Degree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifying the different types of degree in scalable part-of-speech classes such as adjectives and adverbs.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Degree</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Demonstrative -->
+
+    <Class rdf:about="&OntoMorph;Demonstrative">
+        <rdfs:label xml:lang="en">Demonstrative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Deontic -->
+
+    <Class rdf:about="&OntoMorph;Deontic">
+        <rdfs:label xml:lang="en">Deontic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EventModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Deponent -->
+
+    <Class rdf:about="&OntoMorph;Deponent">
+        <rdfs:label>Deponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VoiceType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/DerivationalMorpheme -->
+
+    <Class rdf:about="&OntoMorph;DerivationalMorpheme">
+        <rdfs:label xml:lang="en">Derivational Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Morpheme"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/DerivationalMorpheme</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">this type of morpheme changes the meaning of the word or the part of speech or both.  Derivational morphemes often create new words.  Example: the prefix and derivational morpheme un added to invited changes the meaning of the word.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Desiderative -->
+
+    <Class rdf:about="&OntoMorph;Desiderative">
+        <rdfs:label xml:lang="en">Desiderative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SentenceModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Diptotic -->
+
+    <Class rdf:about="&OntoMorph;Diptotic">
+        <rdfs:label xml:lang="en">Diptotic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DiptoticityType"/>
+        <rdfs:comment xml:lang="en">In Arabic, expresses that a noun or adjective lemma inflects in an atypical way as it presents only two cases in the indefinite instead of three.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/DiptoticityType -->
+
+    <Class rdf:about="&OntoMorph;DiptoticityType">
+        <rdfs:label xml:lang="en">Diptoticity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <OntoMorph:languageSpecific xml:lang="en">Arabic</OntoMorph:languageSpecific>
+        <rdfs:comment xml:lang="en">Arabic-specific distinction for nouns and adjectives.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Direct -->
+
+    <Class rdf:about="&OntoMorph;Direct">
+        <rdfs:label xml:lang="en">Direct</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Direction -->
+
+    <Class rdf:about="&OntoMorph;Direction">
+        <rdfs:label xml:lang="en">Direction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Dual -->
+
+    <Class rdf:about="&OntoMorph;Dual">
+        <rdfs:label xml:lang="en">Dual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+        <rdfs:comment xml:lang="en">Grammatical number distinction present in some languages, in addition to singular and plural. Interpreted as referring to two entities.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Elative -->
+
+    <Class rdf:about="&OntoMorph;Elative">
+        <rdfs:label xml:lang="en">Elative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DegreeType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Enclitic -->
+
+    <Class rdf:about="&OntoMorph;Enclitic">
+        <rdfs:label xml:lang="en">Enclitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CliticType"/>
+        <rdfs:comment xml:lang="en">Appearing after its host.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Endoclitic -->
+
+    <Class rdf:about="&OntoMorph;Endoclitic">
+        <rdfs:label xml:lang="en">Endoclitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CliticType"/>
+        <rdfs:comment xml:lang="en">Splitting its host apart and inserted between the two pieces.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/EntityType -->
+
+    <Class rdf:about="&OntoMorph;EntityType">
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Semantic classification of nouns based on the type of reference they denote. This classification is typically applied on proper nouns for automatic information extraction purposes.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Epistemic -->
+
+    <Class rdf:about="&OntoMorph;Epistemic">
+        <rdfs:label xml:lang="en">Epistemic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EventModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/EventModalityType -->
+
+    <Class rdf:about="&OntoMorph;EventModalityType">
+        <rdfs:label xml:lang="en">Event Modality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Type of modality expressed at the event level. It can be applied to different POS classes, typically modal verb in languages like English (e.g., should), but also adjectives (probable), adverbs (possibly, perhaps), etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Evidential -->
+
+    <Class rdf:about="&OntoMorph;Evidential">
+        <rdfs:label xml:lang="en">Evidential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+        <rdfs:comment xml:lang="en">The Underspecified value if no more information is available.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/EvidentialityType -->
+
+    <Class rdf:about="&OntoMorph;EvidentialityType">
+        <rdfs:label xml:lang="en">Evidentiality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifying different types of evidentiality markers.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Exclamative -->
+
+    <Class rdf:about="&OntoMorph;Exclamative">
+        <rdfs:label xml:lang="en">Exclamative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SentenceModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Exclusive -->
+
+    <Class rdf:about="&OntoMorph;Exclusive">
+        <rdfs:label xml:lang="en">Exclusive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronounScopeType"/>
+        <rdfs:comment xml:lang="en">First person plural pronouns referring to the speaker and other individuals who are not the addressees.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Existential -->
+
+    <Class rdf:about="&OntoMorph;Existential">
+        <rdfs:label xml:lang="en">Existential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Expletive -->
+
+    <Class rdf:about="&OntoMorph;Expletive">
+        <rdfs:label xml:lang="en">Expletive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronominalType"/>
+        <rdfs:comment xml:lang="en">Pronouns used due to syntax constraints, but not adding further meaning. For example, English pronoun it in it rained.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Feminine -->
+
+    <Class rdf:about="&OntoMorph;Feminine">
+        <rdfs:label xml:lang="en">Feminine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;GenderType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/First -->
+
+    <Class rdf:about="&OntoMorph;First">
+        <rdfs:label xml:lang="en">First</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+        <disjointWith rdf:resource="&OntoMorph;Second"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Fraction -->
+
+    <Class rdf:about="&OntoMorph;Fraction">
+        <rdfs:label xml:lang="en">Fraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumeralType"/>
+        <rdfs:comment xml:lang="en">A number form used to indicate fraction.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/FreeMorpheme -->
+
+    <Class rdf:about="&OntoMorph;FreeMorpheme">
+        <rdfs:label xml:lang="en">Free Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Morpheme"/>
+        <rdfs:comment xml:lang="en">a morpheme that can stand alone as a word without another morpheme.  It does not need anything attached to it to make a word. Cat is a free morpheme.</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/FreeMorpheme</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Future -->
+
+    <Class rdf:about="&OntoMorph;Future">
+        <rdfs:label xml:lang="en">Future</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;TenseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/GenderType -->
+
+    <Class rdf:about="&OntoMorph;GenderType">
+        <rdfs:label xml:lang="en">Gender</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <disjointWith rdf:resource="&OntoMorph;NounClassType"/>
+        <rdfs:comment xml:lang="en">Gender distinctions, generally relevant for POS classes in the noun phrase group (nouns, adjectives, determiners, etc.). In some languages, however, gender also applies to verbs, in particular to their participial form (e.g., demanada (&apos;asked for&apos;+fem.) in Catalan).</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Gender</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Genitive -->
+
+    <Class rdf:about="&OntoMorph;Genitive">
+        <rdfs:label xml:lang="en">Genitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Gerund -->
+
+    <Class rdf:about="&OntoMorph;Gerund">
+        <rdfs:label xml:lang="en">Gerund</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Hearsay -->
+
+    <Class rdf:about="&OntoMorph;Hearsay">
+        <rdfs:label xml:lang="en">Hearsay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Hortative -->
+
+    <Class rdf:about="&OntoMorph;Hortative">
+        <rdfs:label xml:lang="en">Hortative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EventModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Ideophone -->
+
+    <Class rdf:about="&OntoMorph;Ideophone">
+        <rdfs:label xml:lang="en">Ideophone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdeophoneType"/>
+        <rdfs:comment xml:lang="en">Underspecied value.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/IdeophoneType -->
+
+    <Class rdf:about="&OntoMorph;IdeophoneType">
+        <rdfs:label xml:lang="en">Ideophone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Ideophones are lexical units that evoke a vivid impression of certain sensations or sensory perceptions (e.g. sound meow for a cat), movement, color (e.g., English bling, describing the glinting of light on things like gold), shape, action (ta-da!), etc. It is a lexical class based on the special relation between form and meaning. In some languages, ideophones correspond to common POS classes (e.g., adjectives, adverbs, etc.), but in others they are an independent POS.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Idiom -->
+
+    <Class rdf:about="&OntoMorph;Idiom">
+        <rdfs:label xml:lang="en">Idiom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdiomaticType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/IdiomaticType -->
+
+    <Class rdf:about="&OntoMorph;IdiomaticType">
+        <rdfs:label xml:lang="en">Idiomatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">The current classes have been devised for Chinese specifically, but nothing precludes from expanding the classification to include classes for other languages as well.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Imperative -->
+
+    <Class rdf:about="&OntoMorph;Imperative">
+        <rdfs:label xml:lang="en">Imperative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MoodType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SentenceModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Imperfective -->
+
+    <Class rdf:about="&OntoMorph;Imperfective">
+        <rdfs:label xml:lang="en">Imperfective</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Impersonal -->
+
+    <Class rdf:about="&OntoMorph;Impersonal">
+        <rdfs:label xml:lang="en">Impersonal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronominalType"/>
+        <rdfs:comment xml:lang="en">Mostly for impersonal verbs.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Inclusive -->
+
+    <Class rdf:about="&OntoMorph;Inclusive">
+        <rdfs:label xml:lang="en">Inclusive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronounScopeType"/>
+        <rdfs:comment xml:lang="en">First person plural pronouns referring to the speaker and the addressees.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Indeclinable -->
+
+    <Class rdf:about="&OntoMorph;Indeclinable">
+        <rdfs:label xml:lang="en">Indeclinable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Indefinite -->
+
+    <Class rdf:about="&OntoMorph;Indefinite">
+        <rdfs:label xml:lang="en">Indefinite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DefinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Indicative -->
+
+    <Class rdf:about="&OntoMorph;Indicative">
+        <rdfs:label xml:lang="en">Indicative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MoodType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/IndirectTransitive -->
+
+    <Class rdf:about="&OntoMorph;IndirectTransitive">
+        <rdfs:label xml:lang="en">Indirect Transitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Inferential -->
+
+    <Class rdf:about="&OntoMorph;Inferential">
+        <rdfs:label xml:lang="en">Inferential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/InflectionType -->
+
+    <Class rdf:about="&OntoMorph;InflectionType">
+        <rdfs:label xml:lang="en">Inflection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <OntoMorph:languageSpecific xml:lang="en">German</OntoMorph:languageSpecific>
+        <rdfs:comment xml:lang="en">Type of inflection used for German adjectives when preceding the noun they modify.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/InflectionalMorpheme -->
+
+    <Class rdf:about="&OntoMorph;InflectionalMorpheme">
+        <rdfs:label xml:lang="en">Inflectional Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Morpheme"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/InflectionalMorpheme</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Inflectional morphemes are suffixes in English, but can be infixes (Arabic and Hebrew), or even prefixes in some African languages like Ibibio Inflectional morphemes are suffixes in English, but can be infixes (Arabic and Hebrew), or even prefixes in some African languages like Ibibio.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Instrumental -->
+
+    <Class rdf:about="&OntoMorph;Instrumental">
+        <rdfs:label xml:lang="en">Instrumental</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Interrogative -->
+
+    <Class rdf:about="&OntoMorph;Interrogative">
+        <rdfs:label xml:lang="en">Interrogative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SentenceModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Intransitive -->
+
+    <Class rdf:about="&OntoMorph;Intransitive">
+        <rdfs:label xml:lang="en">Intransitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Invariable -->
+
+    <Class rdf:about="&OntoMorph;Invariable">
+        <rdfs:label xml:lang="en">Invariable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+        <rdfs:comment xml:lang="en">The form can be used both in singular and plural.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Lexical -->
+
+    <Class rdf:about="&OntoMorph;Lexical">
+        <rdfs:label>Lexical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Locative -->
+
+    <Class rdf:about="&OntoMorph;Locative">
+        <rdfs:label xml:lang="en">Locative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/MarkerType -->
+
+    <Class rdf:about="&OntoMorph;MarkerType">
+        <rdfs:label xml:lang="en">Marker</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing the type of grammatical distinction contributed by markers like particles, affixes, etc. For example, comparative and superlative particles mark for distinctions of degree, infinitive particles mark for a non-finiteness feature, and classifiers and concord markers (both of them of POS affix) introduce classifier and concord distinctions, respectively.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Masculine -->
+
+    <Class rdf:about="&OntoMorph;Masculine">
+        <rdfs:label xml:lang="en">Masculine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;GenderType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Mass -->
+
+    <Class rdf:about="&OntoMorph;Mass">
+        <rdfs:label xml:lang="en">Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CountabilityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/MeasureWord -->
+
+    <Class rdf:about="&OntoMorph;MeasureWord">
+        <rdfs:label xml:lang="en">Measure Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ClassifierType"/>
+        <rdfs:comment xml:lang="en">Used with mass nouns and in combination with a numeral to express a unit of measure over the mass denoted by the noun. For example, a measure word in English would be the expression pails in three pails of
+mud.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Mesoclitic -->
+
+    <Class rdf:about="&OntoMorph;Mesoclitic">
+        <rdfs:label xml:lang="en">Mesoclitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CliticType"/>
+        <rdfs:comment xml:lang="en">Appearing between the the host and other affixes attached to it.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Middle -->
+
+    <Class rdf:about="&OntoMorph;Middle">
+        <rdfs:label>Middle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VoiceType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Mixed -->
+
+    <Class rdf:about="&OntoMorph;Mixed">
+        <rdfs:label xml:lang="en">Mixed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;InflectionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Modal -->
+
+    <Class rdf:about="&OntoMorph;Modal">
+        <rdfs:label xml:lang="en">Modal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EventModalityType"/>
+        <rdfs:comment xml:lang="en">The Underspecified value when no more information is available.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Mood -->
+
+    <Class rdf:about="&OntoMorph;Mood">
+        <rdfs:label xml:lang="en">Mood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of mood. This feature can be complemented with information from the mood classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/MoodType -->
+
+    <Class rdf:about="&OntoMorph;MoodType">
+        <rdfs:label xml:lang="en">Mood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing distinctions relative to verbal mood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">a grammatical (usually morphologically marked) feature of verbs, used for signaling modality.[1][2]:p.181;[3] That is, it is the use of verbal inflections—known as grammatical conjugation—that allow speakers to express their attitude toward what they are saying (for example, whether it is intended as a statement of fact, of desire, of command, etc.).</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Mood</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Multiplier -->
+
+    <Class rdf:about="&OntoMorph;Multiplier">
+        <rdfs:label xml:lang="en">Multiplier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumeralType"/>
+        <rdfs:comment xml:lang="en">A number form indicating how many times its object should be multiplied (e.g., double).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Negative -->
+
+    <Class rdf:about="&OntoMorph;Negative">
+        <rdfs:label xml:lang="en">Negative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PolarityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Neuter -->
+
+    <Class rdf:about="&OntoMorph;Neuter">
+        <rdfs:label xml:lang="en">Neuter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;GenderType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NoStemVowel -->
+
+    <Class rdf:about="&OntoMorph;NoStemVowel">
+        <rdfs:label xml:lang="en">NoStemVowel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonAbsolute -->
+
+    <Class rdf:about="&OntoMorph;NonAbsolute">
+        <rdfs:label xml:lang="en">Non Absolute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronounFunctionType"/>
+        <rdfs:comment xml:lang="en">The form can have other POS functions.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonCollective -->
+
+    <Class rdf:about="&OntoMorph;NonCollective">
+        <rdfs:label xml:lang="en">Non Collective</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CollectivenessType"/>
+        <rdfs:comment xml:lang="en">For Arabic (and presumably other languages manifesting the distinction) this is the default value if no information is speciffied.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonFiniteness -->
+
+    <Class rdf:about="&OntoMorph;NonFiniteness">
+        <rdfs:label xml:lang="en">Non Finiteness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of non-finite values, such as infinitive particles. This feature can be complemented with information from the non-finiteness classification; e.g., POS=particle, marker type=non-finiteness, non-finiteness=infintive.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonFinitenessType -->
+
+    <Class rdf:about="&OntoMorph;NonFinitenessType">
+        <rdfs:label xml:lang="en">Non Finiteness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing distinctions proper of non-finite verbal forms.</rdfs:comment>
+        <rdfs:comment xml:lang="en">For markers of non-finite values, such as infinitive particles. This feature can be complemented with information from the non-finiteness classification; e.g., POS=particle, marker type=non-finiteness, non-finiteness=infinitive.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonGradable -->
+
+    <Class rdf:about="&OntoMorph;NonGradable">
+        <rdfs:label xml:lang="en">Non Gradable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DegreeType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonPunctual -->
+
+    <Class rdf:about="&OntoMorph;NonPunctual">
+        <rdfs:label xml:lang="en">Non-Punctual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectDurationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NonThird -->
+
+    <Class rdf:about="&OntoMorph;NonThird">
+        <rdfs:label xml:lang="en">Non Third</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NounClassType -->
+
+    <Class rdf:about="&OntoMorph;NounClassType">
+        <rdfs:label xml:lang="en">Noun Class</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <OntoMorph:languageSpecific xml:lang="en">Bantu</OntoMorph:languageSpecific>
+        <rdfs:comment xml:lang="en">Classifications of Bantu nouns based on the affixes taken on the nouns. Thus, singular and plural forms go into separate classes with the other corresponding class being the inverse of the other (Katamba, 2003). (Source NCS2.owl)</rdfs:comment>
+        <rdfs:seeAlso>http://www.meteck.org/files/ontologies/ncs.owl/BleekMeinhofClassification</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NumberType -->
+
+    <Class rdf:about="&OntoMorph;NumberType">
+        <rdfs:label xml:lang="en">Number</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Number</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">a grammatical category of nouns, pronouns, and adjective and verb agreement that expresses count distinctions (such as &quot;one&quot;, &quot;two&quot;, or &quot;three or more&quot;).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NumeralClassifier -->
+
+    <Class rdf:about="&OntoMorph;NumeralClassifier">
+        <rdfs:label xml:lang="en">Numeral Classifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ClassifierType"/>
+        <rdfs:comment xml:lang="en">Used with countable nouns.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/NumeralType -->
+
+    <Class rdf:about="&OntoMorph;NumeralType">
+        <rdfs:label xml:lang="en">Numeral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing distinctions relevant to POS elements belonging to numeral (and possibly also adjective) classes.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Object -->
+
+    <Class rdf:about="&OntoMorph;Object">
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ConcordType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Onomatopoeia -->
+
+    <Class rdf:about="&OntoMorph;Onomatopoeia">
+        <rdfs:label xml:lang="en">Onomatopoeia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdeophoneType"/>
+        <rdfs:comment xml:lang="en">Ideophones are lexical units that evoke a vivid impression of certain sensations or sensory perceptions (e.g. sound meow for a cat), movement, color (e.g., English  bling, describing the glinting of light on things like gold), shape, action (ta-da!), etc. It is a lexical class based on the special relation between form and meaning. In some languages, ideophones correspond to common POS classes (e.g., adjectives, adverbs, etc.), but in others they are an independent POS.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Ordinal -->
+
+    <Class rdf:about="&OntoMorph;Ordinal">
+        <rdfs:label xml:lang="en">Ordinal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumeralType"/>
+        <rdfs:comment xml:lang="en">A number form used to indicate order (e.g., first, second).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Organization -->
+
+    <Class rdf:about="&OntoMorph;Organization">
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EntityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/OtherNumber -->
+
+    <Class rdf:about="&OntoMorph;OtherNumber">
+        <rdfs:label xml:lang="en">Unspecified Number</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+        <rdfs:comment xml:lang="en">The lexical unit does not bear number information.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Participle -->
+
+    <Class rdf:about="&OntoMorph;Participle">
+        <rdfs:label xml:lang="en">Participle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Partitive -->
+
+    <Class rdf:about="&OntoMorph;Partitive">
+        <rdfs:label xml:lang="en">Partitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumeralType"/>
+        <rdfs:comment xml:lang="en"> A number form used to indicate part (e.g.,  half). Also applying to articles, for example French articles du, des, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Passive -->
+
+    <Class rdf:about="&OntoMorph;Passive">
+        <rdfs:label>Passive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VoiceType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Past -->
+
+    <Class rdf:about="&OntoMorph;Past">
+        <rdfs:label xml:lang="en">Past</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;TenseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PastGerund -->
+
+    <Class rdf:about="&OntoMorph;PastGerund">
+        <rdfs:label xml:lang="en">Past Gerund</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+        <rdfs:comment xml:lang="en">Distinction applicable to e.g. Russian, for gerunds used to indicate an action that took place before the action of the main clause. For instance, equivalent to English: &apos;Having washed and shaved, he has breakfast&apos;.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PastParticiple -->
+
+    <Class rdf:about="&OntoMorph;PastParticiple">
+        <rdfs:label xml:lang="en">Past Participle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Perfective -->
+
+    <Class rdf:about="&OntoMorph;Perfective">
+        <rdfs:label xml:lang="en">Perfective</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Person -->
+
+    <Class rdf:about="&OntoMorph;Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EntityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PersonType -->
+
+    <Class rdf:about="&OntoMorph;PersonType">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Person</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">the grammatical distinction between deictic references to participant(s) in an event; typically the distinction is between the speaker, the addressee, and others. Grammatical person typically defines a language&apos;s set of personal pronouns. It also frequently affects verbs, sometimes nouns, and possessive relationships.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Personal -->
+
+    <Class rdf:about="&OntoMorph;Personal">
+        <rdfs:label xml:lang="en">Personal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Phrasal -->
+
+    <Class rdf:about="&OntoMorph;Phrasal">
+        <rdfs:label xml:lang="en">Phrasal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;UnitStructureType"/>
+        <rdfs:comment xml:lang="en">Used for English phrasal verbs and any equivalent construction.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Phrase -->
+
+    <Class rdf:about="&OntoMorph;Phrase">
+        <rdfs:label xml:lang="en">Phrase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;UnitStructureType"/>
+        <rdfs:comment xml:lang="en">Used for units structurally more complex than a token or a compound but less than a clause, and which correspond to phrasal structures for main POS units, e.g., noun phrase, adjective phrase, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Place -->
+
+    <Class rdf:about="&OntoMorph;Place">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EntityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Plural -->
+
+    <Class rdf:about="&OntoMorph;Plural">
+        <rdfs:label xml:lang="en">Plural</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Polarity -->
+
+    <Class rdf:about="&OntoMorph;Polarity">
+        <rdfs:label xml:lang="en">Polarity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of polarity. This feature can be complemented with information from the polarity classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PolarityType -->
+
+    <Class rdf:about="&OntoMorph;PolarityType">
+        <rdfs:label xml:lang="en">Polarity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing the two-fold distinction positive vs. negative.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Polite -->
+
+    <Class rdf:about="&OntoMorph;Polite">
+        <rdfs:label xml:lang="en">Polite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Positive -->
+
+    <Class rdf:about="&OntoMorph;Positive">
+        <rdfs:label xml:lang="en">Positive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DegreeType"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PolarityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Possessive -->
+
+    <Class rdf:about="&OntoMorph;Possessive">
+        <rdfs:label xml:lang="en">Possessive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Predicative -->
+
+    <Class rdf:about="&OntoMorph;Predicative">
+        <rdfs:label xml:lang="en">Predicative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AdjectiveFunctionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PrepositionArticle -->
+
+    <Class rdf:about="&OntoMorph;PrepositionArticle">
+        <rdfs:label xml:lang="en">Preposition Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ContractionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Present -->
+
+    <Class rdf:about="&OntoMorph;Present">
+        <rdfs:label xml:lang="en">Present</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;TenseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PresentGerund -->
+
+    <Class rdf:about="&OntoMorph;PresentGerund">
+        <rdfs:label xml:lang="en">Present Gerund</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+        <rdfs:comment xml:lang="en">Distinction applicable to e.g. Russian, for gerunds used to indicate an action that takes place simultaneously with the action of the main clause. For instance, equivalent to English: &apos;They sit twiddling their thumbs&apos;</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PresentParticiple -->
+
+    <Class rdf:about="&OntoMorph;PresentParticiple">
+        <rdfs:label xml:lang="en">Present Participle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Presentative -->
+
+    <Class rdf:about="&OntoMorph;Presentative">
+        <rdfs:label xml:lang="en">Presentative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+        <rdfs:comment xml:lang="en">Applying for example to French forms voila and voici and comparable ones in other languages.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Proclitic -->
+
+    <Class rdf:about="&OntoMorph;Proclitic">
+        <rdfs:label xml:lang="en">Proclitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CliticType"/>
+        <rdfs:comment xml:lang="en">Appearing before its host.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Progressive -->
+
+    <Class rdf:about="&OntoMorph;Progressive">
+        <rdfs:label xml:lang="en">Progressive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Pronominal -->
+
+    <Class rdf:about="&OntoMorph;Pronominal">
+        <rdfs:label xml:lang="en">Pronominal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PronominalType -->
+
+    <Class rdf:about="&OntoMorph;PronominalType">
+        <rdfs:label>Pronominal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinctions concerning different types of pronouns and by extension too to verbs, as in some languages verbs take different types of pronouns as part of their lemma and are subsequently classified based on that (e.g., Catalan reflexive verb adonar-se, &apos;realize&apos;).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PronounFunctionType -->
+
+    <Class rdf:about="&OntoMorph;PronounFunctionType">
+        <rdfs:label xml:lang="en">Pronoun Function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing whether a pronoun can perform another syntactic function (e.g., determiner, adjective).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PronounScopeType -->
+
+    <Class rdf:about="&OntoMorph;PronounScopeType">
+        <rdfs:label xml:lang="en">Pronoun Scope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Proper -->
+
+    <Class rdf:about="&OntoMorph;Proper">
+        <rdfs:label xml:lang="en">Proper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PropernessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/PropernessType -->
+
+    <Class rdf:about="&OntoMorph;PropernessType">
+        <rdfs:label xml:lang="en">Properness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Applied to nouns and adjectives to distinguish whether they name specific individuals (people, places, organizations, etc.) or refer to non-specific entities. Proper adjectives are commonly derived from proper nouns (e.g., Shakespearian, Tibetan).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Punctual -->
+
+    <Class rdf:about="&OntoMorph;Punctual">
+        <rdfs:label xml:lang="en">Punctual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectDurationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Reciprocal -->
+
+    <Class rdf:about="&OntoMorph;Reciprocal">
+        <rdfs:label xml:lang="en">Reciprocal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronominalType"/>
+        <rdfs:comment xml:lang="en">Pronoun used to indicate that two or more people are carrying out an action and are both simultaneously receiving the consequences of it. For example, Spanish form se accompanying the verb saludar (English &apos;greet&apos;): se saludaron (&apos;they greeted each other&apos;).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ReferentialType -->
+
+    <Class rdf:about="&OntoMorph;ReferentialType">
+        <rdfs:label xml:lang="en">Referential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Applied to typical referential POS classes (pronoun, determiner, adjective, etc.) to distinguish the manner of reference they express: demonstrative, interrogative, possessive, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ReflexivePR -->
+
+    <Class rdf:about="&OntoMorph;ReflexivePR">
+        <rdfs:label xml:lang="en">Reflexive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronominalType"/>
+        <rdfs:comment xml:lang="en">Pronoun expressing that the object of a sentence is the same as the subject, who therefore both carries out the action and receives its benefits.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Relative -->
+
+    <Class rdf:about="&OntoMorph;Relative">
+        <rdfs:label xml:lang="en">Relative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ResidualType -->
+
+    <Class rdf:about="&OntoMorph;ResidualType">
+        <rdfs:label xml:lang="en">Residual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Types for residual lexical units, such as abbreviations and symbols. Note: These elements can also be analysed as belonging to different POS classes, but for the moment we leave them in an independent class.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Second -->
+
+    <Class rdf:about="&OntoMorph;Second">
+        <rdfs:label xml:lang="en">Second</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Semelfactive -->
+
+    <Class rdf:about="&OntoMorph;Semelfactive">
+        <rdfs:label xml:lang="en">Semelfactive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AktionsartType"/>
+        <rdfs:comment xml:lang="en">Denoting an event that has no duration (see Aspect Duration Type section) and is atelic (see Aspect telicity Type section).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Semiauxiliary -->
+
+    <Class rdf:about="&OntoMorph;Semiauxiliary">
+        <rdfs:label>Semiauxiliary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VerbType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Semideponent -->
+
+    <Class rdf:about="&OntoMorph;Semideponent">
+        <rdfs:label>Semideponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;VoiceType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Sensory -->
+
+    <Class rdf:about="&OntoMorph;Sensory">
+        <rdfs:label xml:lang="en">Sensory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SentenceModality -->
+
+    <Class rdf:about="&OntoMorph;SentenceModality">
+        <rdfs:label xml:lang="en">Sentence Modality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of sentence modality (exclamative, imperative, etc.). This feature can be complemented with information from the semtence modality classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SentenceModalityType -->
+
+    <Class rdf:about="&OntoMorph;SentenceModalityType">
+        <rdfs:label xml:lang="en">Sentence Modality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinctions relative to type of sentence. Needed for fully typifying particles in charge of expressing this type of information in certain languages.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SetPhrase -->
+
+    <Class rdf:about="&OntoMorph;SetPhrase">
+        <rdfs:label xml:lang="en">Set Phrase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdiomaticType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Singular -->
+
+    <Class rdf:about="&OntoMorph;Singular">
+        <rdfs:label xml:lang="en">Singular</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/State -->
+
+    <Class rdf:about="&OntoMorph;State">
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AktionsartType"/>
+        <rdfs:comment xml:lang="en">Denoting situations that have duration (see Aspect Duration Type section) and changeless.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/StemVowelType -->
+
+    <Class rdf:about="&OntoMorph;StemVowelType">
+        <rdfs:label xml:lang="en">Stem Vowel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <OntoMorph:languageSpecific xml:lang="en">Arabic</OntoMorph:languageSpecific>
+        <rdfs:comment xml:lang="en">Classification exclusive to the Arabic verbal system. Indicates which vowel is used in the imperfect form of the verb. All verbs of verb form Arabic I must have a stem vowel value.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Strong -->
+
+    <Class rdf:about="&OntoMorph;Strong">
+        <rdfs:label xml:lang="en">Strong</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;InflectionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/StructuralRelation -->
+
+    <Class rdf:about="&OntoMorph;StructuralRelation">
+        <rdfs:label xml:lang="en">Structural Relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of distinctions relative to structural relation (coordination, subordination). This information can be complemented with the feature structural relation.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/StructuralRelationType -->
+
+    <Class rdf:about="&OntoMorph;StructuralRelationType">
+        <rdfs:label xml:lang="en">Structural Relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifying the type of relation between two clausal units: coordination or subordination. This feature is needed for markers (particles, affixes) of coordination and subordination present in some languages.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Subcategorization -->
+
+    <Class rdf:about="&OntoMorph;Subcategorization">
+        <rdfs:label xml:lang="en">Subcategorization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of subcategorization distinctions. For example, for representing copulative prefixes in Zulu: part of speech=prefix, marker type=subcategorization, subcategorization=copulative.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SubcategorizationType -->
+
+    <Class rdf:about="&OntoMorph;SubcategorizationType">
+        <rdfs:label xml:lang="en">Subcategorization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Expressing the different types of subcategorization behavior. At the moment the class names are based on the widely spread dictionary distinctions, very oriented towards verbal classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Subject -->
+
+    <Class rdf:about="&OntoMorph;Subject">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ConcordType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Subjunctive -->
+
+    <Class rdf:about="&OntoMorph;Subjunctive">
+        <rdfs:label xml:lang="en">Subjunctive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MoodType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Subordination -->
+
+    <Class rdf:about="&OntoMorph;Subordination">
+        <rdfs:label xml:lang="en">Subordination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StructuralRelationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Superlative -->
+
+    <Class rdf:about="&OntoMorph;Superlative">
+        <rdfs:label xml:lang="en">Superlative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DegreeType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SupineI -->
+
+    <Class rdf:about="&OntoMorph;SupineI">
+        <rdfs:label xml:lang="en">Supine I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/SupineII -->
+
+    <Class rdf:about="&OntoMorph;SupineII">
+        <rdfs:label xml:lang="en">Supine II</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Symbol -->
+
+    <Class rdf:about="&OntoMorph;Symbol">
+        <rdfs:label xml:lang="en">Symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ResidualType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Telic -->
+
+    <Class rdf:about="&OntoMorph;Telic">
+        <rdfs:label xml:lang="en">Telic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;AspectTelicityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Temporal -->
+
+    <Class rdf:about="&OntoMorph;Temporal">
+        <rdfs:label xml:lang="en">Temporal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ThematicRoleType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Tense -->
+
+    <Class rdf:about="&OntoMorph;Tense">
+        <rdfs:label xml:lang="en">Tense</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of tense. This information can be complemented with the feature tense.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/TenseType -->
+
+    <Class rdf:about="&OntoMorph;TenseType">
+        <rdfs:label xml:lang="en">Tense</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Distinctions relative to tense. Aiming at covering only simple forms. Therefore, forms such as Spanish &apos;preterito pluscuamperfecto&apos; (e.g., habia cantado) are disregarded.
+Distinctions involving grammatical aspect (e.g., between Spanish &apos;preterito imperfecto&apos; cantaba and &apos;preterito perfecto&apos; simple cante) are dealt with in combination with values in the Aspect Type classification</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Tense</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ThematicRole -->
+
+    <Class rdf:about="&OntoMorph;ThematicRole">
+        <rdfs:label xml:lang="en">Thematic Role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MarkerType"/>
+        <rdfs:comment xml:lang="en">For markers of thematic role. This feature can be complemented with information from the thematic role classification.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ThematicRoleType -->
+
+    <Class rdf:about="&OntoMorph;ThematicRoleType">
+        <rdfs:label xml:lang="en">Thematic Role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Describing whether the unit expresses semantic information characteristic of certain adjuncts; i.e., time, place, direction, instrument, etc.
+
+Note: The term thematic role is being used here is a slightly broader sense than in the standard linguistic literature, as it includes distinctions also hold by adjunts (e.g., presentative, associative), but that are not generally considered thematic relations.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Third -->
+
+    <Class rdf:about="&OntoMorph;Third">
+        <rdfs:label xml:lang="en">Third</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Time -->
+
+    <Class rdf:about="&OntoMorph;Time">
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EntityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Token -->
+
+    <Class rdf:about="&OntoMorph;Token">
+        <rdfs:label xml:lang="en">Token</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;UnitStructureType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/TransitiveSubCat -->
+
+    <Class rdf:about="&OntoMorph;TransitiveSubCat">
+        <rdfs:label xml:lang="en">Transitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Triptotic -->
+
+    <Class rdf:about="&OntoMorph;Triptotic">
+        <rdfs:label xml:lang="en">Triptotic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;DiptoticityType"/>
+        <rdfs:comment xml:lang="en">This is the default value and thus assumed if no information on that for Arabic nouns and adjectives is provided.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/TwoPartAllegoricalSaying -->
+
+    <Class rdf:about="&OntoMorph;TwoPartAllegoricalSaying">
+        <rdfs:label xml:lang="en">Two Part Allegorical Saying</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;IdiomaticType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/UnitStructureType -->
+
+    <Class rdf:about="&OntoMorph;UnitStructureType">
+        <rdfs:label xml:lang="en">Unit Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:comment xml:lang="en">Classifying among different levels of structural units: single token, compound, phrase, etc.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/UnspecifiedCase -->
+
+    <Class rdf:about="&OntoMorph;UnspecifiedCase">
+        <rdfs:label xml:lang="en">Unspecified Case</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/UnspecifiedGender -->
+
+    <Class rdf:about="&OntoMorph;UnspecifiedGender">
+        <rdfs:label xml:lang="en">UnspecifiedGender</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;GenderType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/UnspecifiedPerson -->
+
+    <Class rdf:about="&OntoMorph;UnspecifiedPerson">
+        <rdfs:label xml:lang="en">Unspecified Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PersonType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/UnspecifiedPronoun -->
+
+    <Class rdf:about="&OntoMorph;UnspecifiedPronoun">
+        <rdfs:label xml:lang="en">Unspecified Pronoun</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;PronounFunctionType"/>
+        <rdfs:comment xml:lang="en">Default value when no information on pronoun function is provided.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/VerbFormType -->
+
+    <Class rdf:about="&OntoMorph;VerbFormType">
+        <rdfs:label xml:lang="en">Verb Form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <OntoMorph:languageSpecific xml:lang="en">Arabic</OntoMorph:languageSpecific>
+        <rdfs:comment xml:lang="en">Classification specific to the Arabic verbal system. Verb forms are categories of conjugation characterized by particular duplications, infixes, and/or prefixes. All verbs have a verb form, traditionally expressed in Roman numerals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/VerbType -->
+
+    <Class rdf:about="&OntoMorph;VerbType">
+        <rdfs:label xml:lang="en">Verb</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Vocative -->
+
+    <Class rdf:about="&OntoMorph;Vocative">
+        <rdfs:label xml:lang="en">Vocative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;CaseType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/VoiceType -->
+
+    <Class rdf:about="&OntoMorph;VoiceType">
+        <rdfs:label xml:lang="en">Voice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Voice</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">the voice (also called diathesis and (rarely) gender (of verbs)[1]) of a verb describes the relationship between the action (or state) that the verb expresses and the participants identified by its arguments (subject, object, etc.).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Volitional -->
+
+    <Class rdf:about="&OntoMorph;Volitional">
+        <rdfs:label xml:lang="en">Volitional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;EventModalityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Weak -->
+
+    <Class rdf:about="&OntoMorph;Weak">
+        <rdfs:label xml:lang="en">Weak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;InflectionType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/a -->
+
+    <Class rdf:about="&OntoMorph;a">
+        <rdfs:label xml:lang="en">a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/a-i -->
+
+    <Class rdf:about="&OntoMorph;a-i">
+        <rdfs:label xml:lang="en">a-i</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/a-i-u -->
+
+    <Class rdf:about="&OntoMorph;a-i-u">
+        <rdfs:label xml:lang="en">a-i-u</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/a-u -->
+
+    <Class rdf:about="&OntoMorph;a-u">
+        <rdfs:label xml:lang="en">a-u</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/i -->
+
+    <Class rdf:about="&OntoMorph;i">
+        <rdfs:label xml:lang="en">i</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/i-u -->
+
+    <Class rdf:about="&OntoMorph;i-u">
+        <rdfs:label xml:lang="en">i-u</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/u -->
+
+    <Class rdf:about="&OntoMorph;u">
+        <rdfs:label xml:lang="en">u</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;StemVowelType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Abstract -->
+
+    <Class rdf:about="http://languagehub.oup.com/UpperOntology/Abstract"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/GrammaticalFeature -->
+
+    <Class rdf:about="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Morpheme -->
+
+    <Class rdf:about="http://languagehub.oup.com/UpperOntology/Morpheme">
+        <rdfs:comment xml:lang="en">The smallest functioning unit in the composition of words, and the minimal distinctive unit of grammar. Morphemes are commonly classified into free forms (morphemes which can occur as separate words) and bound forms (morphemes which cannot so occur - mainly affixes). A further distinction may be made between lexical and grammatical morphemes; the former are morphemes used for the construction of new words in a language; the latter are morphemes used to express grammatical relationships between a word and its context. [Crystal 2008: 300] (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Morpheme</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/deprecated -->
+
+    <NamedIndividual rdf:about="&OntoMorph;deprecated"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ere -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ere"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/erunt -->
+
+    <NamedIndividual rdf:about="&OntoMorph;erunt"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/es -->
+
+    <NamedIndividual rdf:about="&OntoMorph;es"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/fragment -->
+
+    <NamedIndividual rdf:about="&OntoMorph;fragment"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ibus -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ibus"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/is -->
+
+    <NamedIndividual rdf:about="&OntoMorph;is"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ise -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ise"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ize -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ize"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/nte -->
+
+    <NamedIndividual rdf:about="&OntoMorph;nte"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/nti -->
+
+    <NamedIndividual rdf:about="&OntoMorph;nti"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/openclosed -->
+
+    <NamedIndividual rdf:about="&OntoMorph;openclosed"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/orum -->
+
+    <NamedIndividual rdf:about="&OntoMorph;orum"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/possessive -->
+
+    <NamedIndividual rdf:about="&OntoMorph;possessive"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/re -->
+
+    <NamedIndividual rdf:about="&OntoMorph;re"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ris -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ris"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/syncopated -->
+
+    <NamedIndividual rdf:about="&OntoMorph;syncopated"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/ubus -->
+
+    <NamedIndividual rdf:about="&OntoMorph;ubus"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/uk -->
+
+    <NamedIndividual rdf:about="&OntoMorph;uk"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/um -->
+
+    <NamedIndividual rdf:about="&OntoMorph;um"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/unpunctuated -->
+
+    <NamedIndividual rdf:about="&OntoMorph;unpunctuated"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/us -->
+
+    <NamedIndividual rdf:about="&OntoMorph;us"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/interrogativeDeterminer -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/interrogativeDeterminer"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/interrogativePronoun -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/interrogativePronoun"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/modal -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/modal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/personal -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/personal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/possessivePronoun -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/possessivePronoun"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/properNoun -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/properNoun"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/anti-passive">
+        <rdfs:comment xml:lang="en">Antipassive is defined as deletion of the object or demotion of the object to an oblique case. </rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY Etymology "http://languagehub.oup.com/Etymology/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Etymology="http://languagehub.oup.com/Etymology/">
+    <Ontology rdf:about="http://languagehub.oup.com/OntoEtym/">
+        <versionIRI rdf:resource="http://languagehub.oup.com/OntoEtym/1.0"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/begins -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/begins">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasDateOfOrigin"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/ends -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/ends">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasDateOfOrigin"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasDateOfOrigin -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDateOfOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasDerivative -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDerivative">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasDerivedForm -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDerivedForm">
+        <rdfs:label xml:lang="en">has Derived Form</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasLanguageOfOrigin -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasLanguageOfOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasNotableIncident -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasNotableIncident">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasOrigin -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasPlaceOfOrigin -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasPlaceOfOrigin">
+        <rdfs:label xml:lang="en">has Place Of Origin</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasEtymology -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/DateOfOrigin -->
+
+    <Class rdf:about="http://languagehub.oup.com/OntoEtym/DateOfOrigin">
+        <rdfs:label xml:lang="en">Date Of Origin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Etymology"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/Derivation -->
+
+    <Class rdf:about="http://languagehub.oup.com/OntoEtym/Derivation">
+        <rdfs:label xml:lang="en">Derivation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Etymology"/>
+        <rdfs:seeAlso xml:lang="en">http://www.w3.org/ns/prov#Derivation</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">the process of forming a new word on the basis of an existing word, e.g. happiness and unhappy from the root word happy, or determination from determine. It often involves the addition of a morpheme in the form of an affix, such as -ness, un-, and -ation in the preceding examples.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/EntryOrigin -->
+
+    <Class rdf:about="http://languagehub.oup.com/OntoEtym/EntryOrigin">
+        <rdfs:label xml:lang="en">Entry Origin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Etymology"/>
+        <disjointWith rdf:resource="http://languagehub.oup.com/OntoEtym/NotableIncident"/>
+        <rdfs:comment xml:lang="en">a summary of the origin of the Entry</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/NotableIncident -->
+
+    <Class rdf:about="http://languagehub.oup.com/OntoEtym/NotableIncident">
+        <rdfs:label xml:lang="en">Notable Incident</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Etymology"/>
+        <rdfs:comment xml:lang="en">A newsworthy event. An un-disputable real world event (nsl:Event)</rdfs:comment>
+        <rdfs:comment xml:lang="en">a notable event or occurrence of the Entry in the content of Etymology</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://purl.org/ontology/storyline/Event</rdfs:seeAlso>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Etymology -->
+
+    <Class rdf:about="http://languagehub.oup.com/UpperOntology/Etymology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1920s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1920s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1930s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1930s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1940s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1940s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1950s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1950s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1960s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1960s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1970s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1970s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1980s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1980s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/1990s -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/1990s">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/Middle_English -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/Middle_English">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/Old_English -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/Old_English">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_16th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_16th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_17th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_17th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_18th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_18th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_19th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_19th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_20th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_20th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/early_21st_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/early_21st_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_15th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_15th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_16th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_16th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_17th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_17th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_18th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_18th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_19th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_19th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/late_Middle_English -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/late_Middle_English">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/mid_16th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/mid_16th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/mid_17th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/mid_17th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/mid_18th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/mid_18th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/mid_19th_cent -->
+
+    <NamedIndividual rdf:about="http://languagehub.oup.com/OntoEtym/mid_19th_cent">
+        <rdf:type rdf:resource="http://languagehub.oup.com/OntoEtym/DateOfOrigin"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

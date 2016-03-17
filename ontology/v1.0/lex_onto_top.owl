@@ -1,0 +1,2444 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://languagehub.oup.com/UpperOntology/"
+     xml:base="http://languagehub.oup.com/UpperOntology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://languagehub.oup.com/UpperOntology/">
+        <editedBy>Artemis Parvizi</editedBy>
+        <editedBy>Matt Kohl</editedBy>
+        <creationDate>1 April 2015</creationDate>
+        <editDate>16 November 2015</editDate>
+        <createdBy>Artemis Parvizi</createdBy>
+        <copyRight>Oxford University Press</copyRight>
+        <owl:imports rdf:resource="http://languagehub.oup.com/"/>
+        <owl:imports rdf:resource="http://languagehub.oup.com/OntoMorph"/>
+        <owl:imports rdf:resource="http://languagehub.oup.com/OntoPron"/>
+        <owl:imports rdf:resource="http://languagehub.oup.com/OntoEtym/"/>
+        <owl:versionIRI rdf:resource="http://languagehub.oup.com/UpperOntology/0.2"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/copyRight -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/copyRight">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/createdBy -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/createdBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/creationDate -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/creationDate">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/editedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/editedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/lastEditDate -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/lastEditDate">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/versionNumber -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/versionNumber">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/abbreviationFor -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/abbreviationFor">
+        <rdfs:label xml:lang="en">abbreviation For</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#abbreviationFor</rdfs:seeAlso>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasAbbreviation"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isSpecificationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/closeMatch -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/closeMatch">
+        <rdfs:label xml:lang="en">close Match</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/comesAfter -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/comesAfter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">comes After</rdfs:label>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/comesBefore"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasOrdering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/comesBefore -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/comesBefore">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">comes Before</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasOrdering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/derivesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/derivesFrom">
+        <rdfs:label xml:lang="en">derives From</rdfs:label>
+        <rdfs:seeAlso>http://purl.org/pav/derivedFrom</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The etymology can be derived from another etymology.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isEtymologicalRelationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/editorialNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/editorialNote">
+        <rdfs:label xml:lang="en">editorial Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasAbbreviation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasAbbreviation">
+        <rdfs:label xml:lang="en">has Abbreviation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasAntonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasAntonym">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Antonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#antonym</rdfs:seeAlso>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/antonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">refers to words that are related by having the opposite meanings to each other</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasAssociation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasAssociation">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Association</rdfs:label>
+        <rdfs:comment xml:lang="en">e.g nail-hammer</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCanonicalForm -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCanonicalForm">
+        <rdfs:label xml:lang="en">has Canonical Form</rdfs:label>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#canonicalForm</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The canonical (&quot;dictionary&quot;) form of the lexical entry. This can be used to indicate the &quot;lemma&quot; form of a lexical entry. (lemon)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicalForm"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isCanonicalFormOf"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasCanonicalForm"/>
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasTransliteration"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCapitalization -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCapitalization">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Capitalisation</rdfs:label>
+        <rdfs:label xml:lang="en">has Capitalization</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Capitalization"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasOrthographicStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCapitonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCapitonym">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Capitonym</rdfs:label>
+        <rdfs:comment xml:lang="en">Capitonyms are words that share the same spelling but have different meanings when capitalized (and may or may not have different pronunciations). </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHomonym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasClassicalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasClassicalRelation">
+        <rdfs:label xml:lang="en">has Classical Relation</rdfs:label>
+        <rdfs:comment xml:lang="en">This is the superclass of common lexical relations such as synonym, antonym, etc. NOTE: this needs work. Such relations really pertain to meaning and not form units. (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/lexicalRelation</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCloseSynonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCloseSynonym">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Close Synonym</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCollocate -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCollocate">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Collocate</rdfs:label>
+        <rdfs:comment xml:lang="en">words or terms that co-occur</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCompatibility -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCompatibility">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Compatibility</rdfs:label>
+        <rdfs:comment xml:lang="en">corresponds to the overlap between classes</rdfs:comment>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+        <owl:propertyDisjointWith rdf:resource="http://languagehub.oup.com/UpperOntology/hasIncompatibility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasConsonant -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasConsonant">
+        <rdfs:label xml:lang="en">has Consonant</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpellingStructure"/>
+        <owl:propertyDisjointWith rdf:resource="http://languagehub.oup.com/UpperOntology/hasVowel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasDefinition">
+        <rdfs:label xml:lang="en">has Definition</rdfs:label>
+        <rdfs:seeAlso>http://www.w3.org/2004/02/skos/core#definition</rdfs:seeAlso>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/definition</rdfs:seeAlso>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#definition</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Definition"/>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasDialect -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasDialect">
+        <rdfs:label xml:lang="en">has Dialect</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Dialect"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasDirectTranslation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasDirectTranslation">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Direct Translation</rdfs:label>
+        <rdfs:comment xml:lang="en">Literal translation, direct translation, or word-for-word translation is the rendering of text from one language to another one word at a time (Latin: &quot;verbum pro verbo&quot;) with or without conveying the sense of the original whole.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasTranslation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasDomain">
+        <rdfs:label xml:lang="en">has Domain</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/domain</rdfs:seeAlso>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#subjOfProp</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Indicates the semantic argument with represents the subjects (domain) of the property referred to by this sense. (lemon)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasEditorD -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasEditorD">
+        <rdfs:label xml:lang="en">has Editor ID</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/AgentID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasUserInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasEntry -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasEntry">
+        <rdfs:label xml:lang="en">has Entry</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/EntryID"/>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasEntry"/>
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasInflection"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasExample -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasExample">
+        <rdfs:label xml:lang="en">has Example</rdfs:label>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#example</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Example"/>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHappensBefore -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHappensBefore">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has Happens Before</rdfs:label>
+        <rdfs:comment xml:lang="en">e.g marry-divorce</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHeterograph -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHeterograph">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Heterograph</rdfs:label>
+        <rdfs:comment xml:lang="en">Homophones (literally &quot;same sound&quot;) are usually defined as words that share the same pronunciation, regardless of how they are spelled. If they are spelled the same then they are also homographs (and homonyms); if they are spelled differently then they are also heterographs (literally &quot;different writing&quot;). Homographic examples include rose (flower) and rose (past tense of rise). Heterographic examples include to, too, two, and there, their, they’re. Due to their similar yet non-identical pronunciation, &quot;Ladder&quot; and &quot;Latter&quot; do not qualify as homophones, but rather synophones</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHomophone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHeteronym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHeteronym">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Heteronym</rdfs:label>
+        <rdfs:comment xml:lang="en">Heteronyms (literally &quot;different name&quot;) are the subset of homographs (words that share the same spelling) that have different pronunciations (and meanings).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHomograph"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHolonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHolonym">
+        <rdfs:label xml:lang="en">has Holonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#holonymTerm</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Indicates that the referenced element is a part of this object. (LexInfo)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHomograph -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHomograph">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Homograph</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#homograph</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Homographs (literally &quot;same writing&quot;) are usually defined as words that share the same spelling, regardless of how they are pronounced.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHomonym"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasCanonicalForm"/>
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/isCanonicalFormOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHomonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHomonym">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Homonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#homonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">refers to the relationship between words that are spelled or pronounced the same way but hold different meanings.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHomophone -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHomophone">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>has Homophone</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#homophone</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Homophones (literally &quot;same sound&quot;) are usually defined as words that share the same pronunciation, regardless of how they are spelled. If they are spelled the same then they are also homographs (and homonyms).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHomonym"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/hasPronunciation"/>
+            <rdf:Description rdf:about="http://languagehub.oup.com/UpperOntology/isPronunciationOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHypernym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHypernym">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has Hypernym</rdfs:label>
+        <rdfs:comment xml:lang="en">In simpler terms, a hyponym shares a type-of relationship with its hypernym</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#hypernym</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHyponym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHyphenation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHyphenation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Hyphenation</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Hyphenation"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasOrthographicStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHyponym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHyponym">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has Hyponym</rdfs:label>
+        <rdfs:comment xml:lang="en">a word or phrase whose semantic field is more specific than its hypernym</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#hyponym</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasIncompatibility -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasIncompatibility">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Incompatibility</rdfs:label>
+        <rdfs:comment xml:lang="en">set of lexemes that are mutually exclusive member of the same subclass category e.g. red and green</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasInferredTranslation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasInferredTranslation">
+        <rdfs:label xml:lang="en">has Inferred Translation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasInflection -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasInflection">
+        <rdfs:label xml:lang="en">has Inflection</rdfs:label>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalEntry"/>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isIflectionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLanguage">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Language</rdfs:label>
+        <rdfs:seeAlso>http://purl.org/dc/terms/language</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Language"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLexicalCategory -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLexicalCategory">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Lexical Category</rdfs:label>
+        <rdfs:comment xml:lang="en">A lexical category that a term can be used in.</rdfs:comment>
+        <rdfs:seeAlso>http://lexvo.org/ontology#lexicalCategory</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLexicalForm -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLexicalForm">
+        <rdfs:label xml:lang="en">has Lexical Form</rdfs:label>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#lexicalForm</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Denotes a written representation of a lexical entry. (lemon)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalEntry"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isLexicalFormOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLexicology -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLexicology">
+        <rdfs:label>has Lexicology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMarker -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMarker">
+        <rdfs:label xml:lang="en">has Marker</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMemberHolonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMemberHolonym">
+        <rdfs:label xml:lang="en">has Member Holonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#memberHolonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Indicates the object is a member of this</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHolonym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMemberMeronym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMemberMeronym">
+        <rdfs:label xml:lang="en">has Member meronym</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates this is an element of the other</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#memberMeronym</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMeronym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMeronym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMeronym">
+        <rdfs:label xml:lang="en">has Meronym</rdfs:label>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/meronym</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#meronymTerm</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure">
+        <rdfs:label xml:lang="en">has Morphological Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMorphology -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMorphology">
+        <rdfs:label xml:lang="en">has Morphology</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Morphology"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasMorphosyntacticFeature -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasMorphosyntacticFeature">
+        <rdfs:label xml:lang="en">has Morphosyntactic Feature</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasNearTranslation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasNearTranslation">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Near Translation</rdfs:label>
+        <rdfs:seeAlso>http://purl.org/saws/ontology#isIndirectTranslationOf</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Applies to the situations that a direct one to one translation of a word does not exist in the target language and the closest translation is displayed.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasTranslation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation">
+        <rdfs:label xml:lang="en">has non-Classical Relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasObjectCollocate -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasObjectCollocate">
+        <rdfs:label xml:lang="en">has Object Collocate</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasCollocate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasOrdering -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasOrdering">
+        <rdfs:label xml:lang="en">has Ordering</rdfs:label>
+        <rdfs:comment xml:lang="en">This applies for any straightforward ordering between similar concepets. For example, only between senses, or only between examples.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasOrthographicStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasOrthographicStructure">
+        <rdfs:label xml:lang="en">has Orthographic Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPartHolonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPartHolonym">
+        <rdfs:label xml:lang="en">has Part Holonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#partHolonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Indicates a part of this object</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHolonym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPartMeronym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPartMeronym">
+        <rdfs:label xml:lang="en">has Part meronym</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates this a component of the other concept&lt;</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#partMeronym</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMeronym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPhoneticStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPhoneticStructure">
+        <rdfs:label xml:lang="en">has Phonetic Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPhoneticsNotation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPhoneticsNotation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Phonetics Notation</rdfs:label>
+        <rdfs:comment xml:lang="en">The alphabeti system used to display the phonetic spelling</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPrimarySource -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPrimarySource">
+        <rdfs:label xml:lang="en">has Primary Source</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">prov:hadPrimarySource (http://www.w3.org/TR/prov-o/)</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasProvenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPronunciation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPronunciation">
+        <rdfs:label xml:lang="en">has Pronunciation</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/pronunciation</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#pronunciation</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/PronunciationID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isPronunciationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasProvenance -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasProvenance">
+        <rdfs:label xml:lang="en">has Provenance</rdfs:label>
+        <rdfs:seeAlso>http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#provenance</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasRegion">
+        <rdfs:label xml:lang="en">has Region</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/region</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The region where the thing is located or is connected to.</rdfs:comment>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Region"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasRegister -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasRegister">
+        <rdfs:label xml:lang="en">has Register</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#register</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Register"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSemanticFrame -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSemanticFrame">
+        <rdfs:label xml:lang="en">has Semantic Frame</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/SemanticFrame"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSense -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSense">
+        <rdfs:label xml:lang="en">has Sense</rdfs:label>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#sense</rdfs:seeAlso>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/EntryID"/>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSimpleDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSimpleDefinition">
+        <rdfs:label xml:lang="en">has Simple Definition</rdfs:label>
+        <rdfs:comment xml:lang="en">The definition intended for non-native speakers (AKA GLoss).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSpecification">
+        <rdfs:label xml:lang="en">has Specification</rdfs:label>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isSpecificationOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSpellingStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSpellingStructure">
+        <rdfs:label xml:lang="en">has Spelling Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasStressPattern -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasStressPattern">
+        <rdfs:label xml:lang="en">has Stress Pattern</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSubjectCollocate -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSubjectCollocate">
+        <rdfs:label xml:lang="en">has Subject Collocate</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasCollocate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSubmitter -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSubmitter">
+        <rdfs:label xml:lang="en">has Submitter</rdfs:label>
+        <rdfs:seeAlso>http://voag.linkedmodel.org/voag#submittedBy</rdfs:seeAlso>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/Submitter"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasProvenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSubstanceHolonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSubstanceHolonym">
+        <rdfs:label xml:lang="en">has Substance Holonym</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Indicates what this is composed of</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasHolonym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSubstanceMeronym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSubstanceMeronym">
+        <rdfs:label xml:lang="en">has Substance meronym</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates this is a substance that composes the other</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasMeronym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSyllabification -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSyllabification">
+        <rdfs:label xml:lang="en">has Syllabification</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSyllable -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSyllable">
+        <rdfs:label xml:lang="en">has Syllable</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSynonym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSynonym">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Synonym</rdfs:label>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/synonym</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">refers to words that are pronounced and spelled differently but contain the same meaning</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasSyntacticStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure">
+        <rdfs:label xml:lang="en">has Syntactic Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasTranslation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasTranslation">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Translation</rdfs:label>
+        <rdfs:comment xml:lang="en">The relation between an orthographic expression in one language and some orthographic expression in another such that both expressions have the same or roughly the same meaning. (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/translation</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasTransliteration -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasTransliteration">
+        <rdfs:label xml:lang="en">has Transliteration </rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicalForm"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isTransliterationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasTroponym -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasTroponym">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Troponym</rdfs:label>
+        <rdfs:comment xml:lang="en">emphasising the point that verb inclusion tends to be a matter of manner</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasUserGroup -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasUserGroup">
+        <rdfs:label xml:lang="en">has User Group</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/AgentGroup"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasUserInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasUserInformation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasUserInformation">
+        <rdfs:label xml:lang="en">has User Information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasVariantSpelling -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasVariantSpelling">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Varient Spelling</rdfs:label>
+        <rdfs:seeAlso>http://rdfs.org/scot/spec/#term_spelling_variant</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A variation in the way in which a word is spelled. </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasVowel -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasVowel">
+        <rdfs:label xml:lang="en">has Vowel</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpellingStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isAbbreviationOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isAbbreviationOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">is Abbreviation Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isCanonicalFormOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isCanonicalFormOf">
+        <rdfs:comment xml:lang="en">is Canonical Form Of</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isLexicalFormOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isEtymologicalRelationOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isEtymologicalRelationOf">
+        <rdfs:label xml:lang="en">is Etymological Relation Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isFormerNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isFormerNameOf">
+        <rdfs:label xml:lang="en">is Former Name Of</rdfs:label>
+        <rdfs:comment xml:lang="en">The name that the word was previously referred to</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isIflectionOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isIflectionOf">
+        <rdfs:label xml:lang="en">is Iflection Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isSpecificationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isLexicalFormOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isLexicalFormOf">
+        <rdfs:label xml:lang="en">is Lexical Form Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isOriginOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isOriginOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">Origin Of</rdfs:label>
+        <rdfs:comment xml:lang="en">Other words that are originated from this word</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isEtymologicalRelationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isPronunciationOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isPronunciationOf">
+        <rdfs:label xml:lang="en">is Pronunciation Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isSpecificationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isRelatedTo">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">is Related To</rdfs:label>
+        <rdfs:comment xml:lang="en">Generic relation between two lexical entries.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isSpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isSpecificationOf">
+        <rdfs:label xml:lang="en">is Specification Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isSubsenseOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isSubsenseOf">
+        <rdfs:label xml:lang="en">is Subsense Of</rdfs:label>
+        <rdfs:range rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isSpecificationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/isTransliterationOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isTransliterationOf">
+        <rdfs:label xml:lang="en">is Transliteration Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isLexicalFormOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/rhymesWith -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/rhymesWith">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">rhymes With</rdfs:label>
+        <rdfs:comment xml:lang="en">A rhyme is a repetition of similar sounds (or the same sound) in two or more words</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/validatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/validatedBy">
+        <rdfs:label xml:lang="en">validated By</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasUserInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/createdOn -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/createdOn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">created On</rdfs:label>
+        <rdfs:comment xml:lang="en">The date an agent adds an element to the system.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasCapitalizationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCapitalizationFrequency">
+        <rdfs:label xml:lang="en">has Capitalization Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific capitalized form.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasEtymology -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasEtymology">
+        <rdfs:label xml:lang="en">has Etymology</rdfs:label>
+        <rdfs:comment xml:lang="en">The full etymology as it appears in the XML. The whole string will be preserved to accommodate readability.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasHyphenationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasHyphenationFrequency">
+        <rdfs:label xml:lang="en">has Hyphenation Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific hyphenated form.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasLexicalFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasLexicalFrequency">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Lexical Frequency</rdfs:label>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasNormalizedFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasNormalizedFrequency">
+        <rdfs:label xml:lang="en">has Normalized Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Frequency of a Entry appearing in OUP corpora.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasOrthographicSpellingFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasOrthographicSpellingFrequency">
+        <rdfs:label xml:lang="en">has Orthographic Spelling Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific orthographic spelling form. </rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPhoneticSpelling -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPhoneticSpelling">
+        <rdfs:label xml:lang="en">has Phonetic Spelling</rdfs:label>
+        <rdfs:comment xml:lang="en">Phonetic spelling is the representation of vocal sounds which express pronunciations of words. It is a system of spelling in which each letter represents invariably the same spoken sound.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasPronunciationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPronunciationFrequency">
+        <rdfs:label xml:lang="en">has Pronunciation Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">To discover the most frequently used pronunciation. </rdfs:comment>
+        <rdfs:domain rdf:resource="http://languagehub.oup.com/UpperOntology/PronunciationID"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasTimeStamp">
+        <rdfs:label xml:lang="en">has Time Stamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasUpdatedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasUpdatedDate">
+        <rdfs:label xml:lang="en">has Updated Date</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/AudioFileInfo -->
+
+    <rdf:Description rdf:about="http://languagehub.oup.com/OntoPron/AudioFileInfo">
+        <rdfs:label xml:lang="en">Audio File Info</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Abstract"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Abstract -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Abstract"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Adjective -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Adjective">
+        <rdfs:label xml:lang="en">Adjective</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">A word naming an attribute of a noun, such as sweet, red, or technical. (Oxford Dictionary)</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePOS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Adposition -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Adposition">
+        <rdfs:label xml:lang="en">Adposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Cover term for a closed class of words that express spatial or temporal relations, or mark various semantic roles. Typically combining with one complement, generally a noun phrase. Divided into the following 3 subclasses based on the position they take with respect to the complement: before (preposition), after (postposition) or surrounding it (circumposition). (OUP- 2015)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Adposition</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An adposition is a part of speech whose members are of a closed set and occur before or after a complement composed of a noun phrase, noun, pronoun, or clause that functions as a noun phrase and forms a single structure with the complement to express its grammatical and semantic relation to another unit within a clause [Comrie 1989: 91; Crystal 1997: 305; Payne 1997: 86]. (GOLD 2010)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Adverb -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Adverb">
+        <rdfs:label xml:lang="en">Adverb</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#AdverbPOS</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A word or phrase that modifies the meaning of an adjective, verb, or other adverb, expressing manner, place, time, or degree (e.g. gently, here, now, very). Some adverbs, for example sentence adverbs, can also be used to modify whole sentences. (Oxford Dictionary)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Affix -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Affix">
+        <rdfs:label xml:lang="en">Affix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">An affix is a morpheme with an abstract meaning which can only be used when added to a root morpheme. These are classified in four different ways, depending on their position with reference to the root: suffix, prefix, circumfix and infix. [Haspelmath 2002: 265; Crystal 1980: 17] (GOLD 2010)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Morpheme attached to a stem to form a new word. In some cases it is written as part of the same word whereas in others it appears as an independent element. (OUP -2015)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Circumfix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/AgentGroup -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/AgentGroup">
+        <rdfs:label xml:lang="en">Agent Group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/AgentInformation"/>
+        <rdfs:comment xml:lang="en">Various types od users that can enter data into the system. This is typically used for validation/verfication purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/AgentID -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/AgentID">
+        <rdfs:label xml:lang="en">Agent ID</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/AgentInformation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasUserGroup"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/AgentGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Contains the list of individuals that are registered in this system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/AgentInformation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/AgentInformation">
+        <rdfs:label xml:lang="en">Agent Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Abstract"/>
+        <rdfs:seeAlso>http://purl.org/dc/terms/Agent</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Article -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Article">
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#ArticlePOS</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An article is a word (or prefix or suffix) that is used with a noun to indicate the type of reference being made by the noun. Articles specify grammatical definiteness of the noun, in some languages extending to volume or numerical scope. The articles in the English language are the and a/an, and (in certain contexts) some.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Capitalization -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Capitalization">
+        <rdfs:label xml:lang="en">Capitalisation</rdfs:label>
+        <rdfs:label xml:lang="en">Capitalization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/OrthographicStructure"/>
+        <rdfs:comment xml:lang="en">writing a word with its first letter as a capital letter (upper-case letter) and the remaining letters in lower case in writing systems with a case distinction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Circumfix -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Circumfix">
+        <rdfs:label xml:lang="en">Circumfix</rdfs:label>
+        <rdfs:label xml:lang="en">Two separated parts appearing on each part of the stem.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Affix"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Circumfix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Circumposition -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Circumposition">
+        <rdfs:label xml:lang="en">Circumposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Adposition"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#circumposition</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Consisting of two parts that appear on each side of the complement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/CombiningForm -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/CombiningForm">
+        <rdfs:label xml:lang="en">Combining Form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Affix"/>
+        <rdfs:comment xml:lang="en">Word normally used in compounds in combination with another element to form a word (e.g. Anglo- `English&apos; in Anglo-Irish).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Conjunction -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Conjunction">
+        <rdfs:label xml:lang="en">Conjunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">A word used to connect clauses or sentences or to coordinate words in the same clause (e.g. and, but, if). (Oxford Dictionary) </rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#ConjunctionPOS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Contraction -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Contraction">
+        <rdfs:label xml:lang="en">Contraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#contraction</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Combination of two or more words belonging to a different POS into a single lexical unit. For example, the combinations of preposition+article in Spanish: al (a+el), del (de+el).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/CoreElements -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/CoreElements">
+        <rdfs:label xml:lang="en">Core Elements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Definition -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Definition">
+        <rdfs:label xml:lang="en">Definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Lexicology"/>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#SenseDefinition</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">the exact meaning of a sense.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Determiner -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Determiner">
+        <rdfs:label xml:lang="en">Determiner</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">A modifying word that determines the kind of reference a noun or noun group has, for example a, the, every. (Oxford Dictionary)</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#DeterminerPOS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Dialect -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Dialect">
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:comment xml:lang="en">A regional, temporal or social variety of a language, differing in pronunciation, grammar and vocabulary from the standard language,which is in itself a socially favoured dialect. (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Dialect</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/EntryAbbreviation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/EntryAbbreviation">
+        <rdfs:label xml:lang="en">Entry Abbreviation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Lexicology"/>
+        <rdfs:comment xml:lang="en">a shortened form of the Entry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/EntryID -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/EntryID">
+        <rdfs:label xml:lang="en">Entry ID</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasPrimarySource"/>
+                <owl:onClass rdf:resource="http://languagehub.oup.com/UpperOntology/PrimarySource"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasSense"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Etymology -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Etymology">
+        <rdfs:label xml:lang="en">Etymology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/derivesFrom"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Form"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The study of the origin of words and the way in which their meanings have changed throughout history.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Example -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Example">
+        <rdfs:label xml:lang="en">Example</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasTranslation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Translation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso>http://www.w3.org/2004/02/skos/core#example</rdfs:seeAlso>
+        <rdfs:comment>An example of the usage of a lexical entry when, sememe&apos;s reference. This should in effect be an example, of the form used in context. (lemon)</rdfs:comment>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#UsageExample</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Form -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Form">
+        <rdfs:label xml:lang="en">Form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">A given written or spoken realisation of a lexical entry. (lemon)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A single unit of analysis in the lexicon comprising a collection of forms that are morphologically related or have a single pronunciation and have the same set of meanings.</rdfs:comment>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#Form</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/GrammaticalFeature -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/GrammaticalFeature">
+        <rdfs:label xml:lang="en">Grammatical Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/SyntacticStructure"/>
+        <rdfs:comment xml:lang="en">Inflected words show variation in form. The different forms are correlated with meanings or functions which we label as &apos;features&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Hyphenation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Hyphenation">
+        <rdfs:label xml:lang="en">Hyphenation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/OrthographicStructure"/>
+        <rdfs:comment xml:lang="en">the hyphen (‐) is a punctuation mark used to join words and to separate syllables of a single word</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Ideophone -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Ideophone">
+        <rdfs:label xml:lang="en">Ideophone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Ideophones are lexical units that evoke a vividimpression of certain sensations or sensory perceptions (e.g. sound meow for a cat), movement, color (e.g., English bling, describing the glinting of light on things like gold), shape, action (ta-da!), etc. It is a lexical class based on the special relation between form and meaning. In some languages, ideophones correspond to common POS classes (e.g., adjectives, adverbs, etc.), but in others they are an independent POS.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Idiomatic -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Idiomatic">
+        <rdfs:label xml:lang="en">Idiomatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Multiword, phrasal or clausal expressions, generally with no compositional interpretation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Infix -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Infix">
+        <rdfs:label xml:lang="en">Infix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Affix"/>
+        <rdfs:comment xml:lang="en">A term used in morphology referring to an affix which is added within a root or stem. [Crystal 1985: 157] (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Infix</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Infix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Inflection -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Inflection">
+        <rdfs:label xml:lang="en">Inflection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/MorphologicalProcess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasPronunciation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/PronunciationID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">the modification of a word to express different grammatical categories such as tense, mood, voice, aspect, person, number, gender and case</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Interjection -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Interjection">
+        <rdfs:label xml:lang="en">Interjection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Language -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:seeAlso>http://www.lexvo.org/ontology#lanaguage
+</rdfs:seeAlso>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/language</rdfs:seeAlso>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Language</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The most fundamental means of human communication. Language is a purely human activity, although some animals have communication systems which have certain analogies to human language. All human beings use language to interact with other members of the same speech community. Language is not only used as an instrument of communication, however, but also as a means of individual expression. Language is not instinctive; it has to be learnt as a system of arbitrary conventional symbols. Such symbols are primarily vocal, produced by the so-called organs of speech, but secondary systems such as writing and other codes may complement the vocalsystem. Some linguists, such as F. de Saussure, have stressed the view of language as general patterns in the speech of a community and as the speaking activity of an individual in a particular situation; others, with N.Chomsky, regard language as the innate capability of native speakers to understand and form grammatical sentences as as the actual utterances produced at a given time. [Hartmann and Stork 1972: 123-124] (GOLD 2010)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/LeftParentheticalPunctuation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/LeftParentheticalPunctuation">
+        <rdfs:label xml:lang="en">Left Parenthetical Punctuation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Punctuation"/>
+        <rdfs:comment xml:lang="en">Left parenthetical punctuation mark, e.g., (, [.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/LexicalCategory -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/LexicalCategory">
+        <rdfs:label xml:lang="en">Lexical Category</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/SyntacticStructure"/>
+        <rdfs:comment xml:lang="en">A linguistic category of words (or more precisely lexical items), generally defined by the syntactic or morphological behaviour of the lexical item in question, such as noun or verb.</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/LexicalEntry -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/LexicalEntry">
+        <rdfs:label xml:lang="en">Lexical Entry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicalCategory"/>
+                <owl:onClass rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasInflection"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Inflection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasCanonicalForm"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Form"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasEntry"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/EntryID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasLanguage"/>
+                <owl:onClass rdf:resource="http://languagehub.oup.com/UpperOntology/Language"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso xml:lang="en"> http://www.w3.org/ns/lemon/ontolex#LexicalEntry</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A lexical entry consists of form+language+lexical category. For example, book_en_noun. It effectively is a place holder for extracting various senses in a specific language, and a lexical category that relates to a form.</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://lemon-model.net/lemon#LexicalEntry</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/LexicalForm -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/LexicalForm">
+        <rdfs:label xml:lang="en">Lexical Form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">Various words that are used intechangably depending on the context, e.g &apos;a&apos; and &apos;an&apos;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/LexicalFrequency -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/LexicalFrequency">
+        <rdfs:label xml:lang="en">Lexical Frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">the number of time the word has appeared in OUP corpora</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Lexicology -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Lexicology">
+        <rdfs:label xml:lang="en">Lexicology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">Lexicology is the part of linguistics which studies words.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Marker -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Marker">
+        <rdfs:label xml:lang="en">Marker</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:comment xml:lang="en">Editorial information intended to help a human reader understand the sense. Could be a grammatical note, a historical note, or etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Morpheme -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Morpheme">
+        <rdfs:label xml:lang="en">Morpheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/MorphologicalStructure"/>
+        <rdfs:comment xml:lang="en">The smallest functioning unit in the composition of words, and the minimal distinctive unit of grammar. Morphemes are commonly classified into free forms (morphemes which can occur as separate words) and bound forms (morphemes which cannot so occur - mainly affixes). A further distinction may be made between lexical and grammatical morphemes; the former are morphemes used for the construction of new words in a language; the latter are morphemes used to express grammatical relationships between a word and its context. [Crystal 2008: 300] (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Morpheme</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/MorphologicalProcess -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/MorphologicalProcess">
+        <rdfs:label xml:lang="en">Morphological Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/MorphologicalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/MorphologicalStructure -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/MorphologicalStructure">
+        <rdfs:label xml:lang="en">Morphological Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">study of internal structures of words and how they can be modified</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Morphology -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Morphology">
+        <rdfs:label xml:lang="en">Morphology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasInflection"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Inflection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphologicalStructure"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/MorphologicalStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/MultiWordExpression -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/MultiWordExpression">
+        <rdfs:label xml:lang="en">Multi-Word Expression</rdfs:label>
+        <rdfs:label xml:lang="en">Phrase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Form"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Phrase</rdfs:seeAlso>
+        <rdfs:seeAlso> http://www.w3.org/ns/lemon/ontolex#MultiwordExpression</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A multiword expression is a lexical entry that consists of two or more words. (OntoLex)</rdfs:comment>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#Phrase</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Noun -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Noun">
+        <rdfs:label xml:lang="en">Noun</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">A word (other than a pronoun) used to identify any of a class of people, places, or things. (Oxford Dictionary) </rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#NounPOS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Numeral -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Numeral">
+        <rdfs:label xml:lang="en">Numeral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#NumeralPOS</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A numeral is a member of a word class (or sometimes even a part of speech) designating numbers, such as the English word &apos;two&apos; and the compound &apos;seventy-seven&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/OrthographicStructure -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/OrthographicStructure">
+        <rdfs:label xml:lang="en">Orthographic Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">A system of the art and rules of spelling according to the accepted standards, i.e., the use of the written characters of a language for forming words and sentences in conformity with the rules conventionally recognized as correct. [Pei and Gaynor 1980: 155] (GOLD 2010)</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/OrthographicSystem</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Other -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Other">
+        <rdfs:label xml:lang="en">Other</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/PartOfWord -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PartOfWord">
+        <rdfs:label xml:lang="en">Affix</rdfs:label>
+        <rdfs:label xml:lang="en">Part Of Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Form"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Affix</rdfs:seeAlso>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Affix</rdfs:seeAlso>
+        <rdfs:seeAlso> http://www.w3.org/ns/lemon/ontolex#Affix</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An affix is a lexical entry that represents a morpheme (suffix, prefix, infix, circumfix, etc.) that is attached to a word stem to form a new word.(OntoLex)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Particle -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Particle">
+        <rdfs:label xml:lang="en">Particle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Particles must be associated with another word or phrase to impart meaning. They typically encode grammatical distinctions like negation, mood, tense, or case), etc. However, they cannot be classified as other main POS, including functional ones, such as prepositions, conjunctions, etc.</rdfs:comment>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#ParticlePOS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/PhoneticAnalysis -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PhoneticAnalysis">
+        <rdfs:label xml:lang="en">Phonetic Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/PhoneticStructure -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PhoneticStructure">
+        <rdfs:label xml:lang="en">Phonetic Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">study of the physical properties of speech (or signed) production and perception</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Postposition -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Postposition">
+        <rdfs:label xml:lang="en">Postposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Adposition"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Postposition</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Postposition</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Adposition following the complement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Predeterminer -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Predeterminer">
+        <rdfs:label xml:lang="en">Predeterminer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">A word or phrase that occurs before a determiner, typically quantifying the noun phrase, for example both or a lot of. (Oxford Dictionary)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Prefix -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Prefix">
+        <rdfs:label xml:lang="en">Prefix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Affix"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Prefix</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">an affix that comes before a base morpheme.</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Prefix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Preposition -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Preposition">
+        <rdfs:label>Preposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Adposition"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Preposition</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Preposition</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Adposition preceding the complement, as in English.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/PrimarySource -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PrimarySource">
+        <rdfs:label xml:lang="en">Primary Source</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/ProvenanceInfo"/>
+        <rdfs:seeAlso>http://purl.org/dc/terms/source</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">prov:PrimarySource (http://www.w3.org/TR/prov-o/)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Pronoun -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Pronoun">
+        <rdfs:label xml:lang="en">Pronoun</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#PronounPOS</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A word that can function as a noun phrase used by itself and that refers either to the participants in the discourse (e.g. I, you) or to someone or something mentioned elsewhere in the discourse (e.g. she, it, this). (Oxford Dictionary)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/PronunciationID -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PronunciationID">
+        <rdfs:label xml:lang="en">Pronunciation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasRegion"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasPhoneticSpelling"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/ProvenanceInfo -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/ProvenanceInfo">
+        <rdfs:label xml:lang="en">Provenance Info</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Abstract"/>
+        <rdfs:seeAlso>http://voag.linkedmodel.org/voag#Provenance
+</rdfs:seeAlso>
+        <rdfs:seeAlso>http://open.vocab.org/terms/provenance</rdfs:seeAlso>
+        <rdfs:seeAlso>http://purl.org/dc/terms/provenance
+</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Punctuation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Punctuation">
+        <rdfs:label xml:lang="en">Punctuation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">The marks, such as full stop, comma, and brackets, used in writing to separate sentences and their elements and to clarify meaning. (Oxford Dictionary) </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Region -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Region">
+        <rdfs:label xml:lang="en">Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/region
+</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.w3.org/2006/vcard/ns#region</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">local or regional variations of a language or dialect studied as a field of knowledge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Register -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Register">
+        <rdfs:label xml:lang="en">Register</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Register</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">It defines a context for the Entry. e.g. Offensive, informal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Residual -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Residual">
+        <rdfs:label xml:lang="en">Residual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Cover class for non-standard forms, such as acronyms and abbreviations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/RightParentheticalPunctuation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/RightParentheticalPunctuation">
+        <rdfs:label xml:lang="en">Right Parenthetical Punctuation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Punctuation"/>
+        <rdfs:comment xml:lang="en">Right parenthetical punctuation mark, e.g., ), }</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SemanticFrame -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SemanticFrame">
+        <rdfs:label xml:lang="en">Semantic Frame</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SemanticStructure -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SemanticStructure">
+        <rdfs:label xml:lang="en">Semantic Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">the study of the meaning of words (lexical semantics) and fixed word combinations (phraseology), and how these combine to form the meanings of sentences</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SenseID -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SenseID">
+        <rdfs:label xml:lang="en">Sense ID</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasMorphology"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Morphology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasMarker"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Marker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasUserInformation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/AgentInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasNonClassicalRelation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasPronunciation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/PronunciationID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasSyntacticStructure"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/SyntacticStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasDialect"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Dialect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/SenseID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasOrthographicStructure"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/OrthographicStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasRegister"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Register"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasRegion"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasExample"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Example"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasDomain"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/SubjectDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasTranslation"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/UpperOntology/Translation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso> http://www.w3.org/ns/lemon/ontolex#LexicalSense</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A lexical sense represents the lexical meaning of a lexical entry when interpreted as referring to the corresponding ontology element. A lexical sense thus represents a reification of a pair of a uniquely determined lexical entry and a uniquely determined ontology entity it refers to. A link between a lexical entry and an ontology entity via a Lexical Sense object implies that the lexical entry can be used to refer to the ontology entity in question. (OntoLex)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Oxford dictionary sense ID</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SentenceFinalPunctuation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SentenceFinalPunctuation">
+        <rdfs:label xml:lang="en">Sentence Final Punctuation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Punctuation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SentenceMedialPunctuation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SentenceMedialPunctuation">
+        <rdfs:label xml:lang="en">Sentence Medial Punctuation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Punctuation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SubjectDomain -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SubjectDomain">
+        <rdfs:label xml:lang="en">Subject Domain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/UsageLabels"/>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#LexicalContext</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.linkedmodel.org/schema/vaem#Domain</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A domain is a subject area of interest. Examples of domains are &quot;enterprise&quot;, &quot;process&quot;, &quot;organization&quot; and &quot;system&quot; (VAEM)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The domain associated in the Oxford dictionary</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Submitter -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Submitter">
+        <rdfs:label xml:lang="en">Submitter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/ProvenanceInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Suffix -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Suffix">
+        <rdfs:label xml:lang="en">Postfix</rdfs:label>
+        <rdfs:label xml:lang="en">Suffix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Affix"/>
+        <rdfs:seeAlso>http://purl.org/linguistics/gold/Suffix</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#Suffix</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">an affix that comes after a base morpheme.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SyntacticStructure -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SyntacticStructure">
+        <rdfs:label xml:lang="en">Syntactic Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:comment xml:lang="en">the set of rules, principles, and processes that govern the structure of sentences in a given language</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Translation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Translation">
+        <rdfs:label xml:lang="en">Translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/CoreElements"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/UpperOntology/hasLanguage"/>
+                <owl:onClass rdf:resource="http://languagehub.oup.com/UpperOntology/Language"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The translation of etymological items</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/UsageLabels -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/UsageLabels">
+        <rdfs:label xml:lang="en">Usage Labels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Verb -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Verb">
+        <rdfs:label xml:lang="en">Verb</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#VerbPOS</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A word used to describe an action, state, or occurrence, and forming the main part of the predicate of a sentence, such as hear, become, happen. (Oxford Dictionary)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Word -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Word">
+        <rdfs:label xml:lang="en">Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Form"/>
+        <rdfs:seeAlso> http://www.w3.org/ns/lemon/ontolex#Word</rdfs:seeAlso>
+        <rdfs:seeAlso>http://lemon-model.net/lemon#Word</rdfs:seeAlso>
+        <rdfs:seeAlso>http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A word is a lexical entry that consists of a single word. (OntoLex)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A word is a single unit of writing or speech. (lemon)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="&owl;Thing">
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Abstract"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/gb -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/gb">
+        <rdfs:label xml:lang="en">Great Britain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/us -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/us">
+        <rdfs:label xml:lang="en">United States</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/cardinal -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/cardinal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/expletive -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/expletive"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/ordinal -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/ordinal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/personal -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/personal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/reciprocal -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/reciprocal"/>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/reflexive -->
+
+    <owl:NamedIndividual rdf:about="http://languagehub.oup.com/UpperOntology/reflexive"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
