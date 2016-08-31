@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://languagehub.oup.com/utils/"
+     xml:base="http://languagehub.oup.com/utils/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://languagehub.oup.com/utils/">
+        <owl:versionIRI rdf:resource="http://languagehub.oup.com/utils/0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/utils/culturalNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/culturalNote">
+        <rdfs:label xml:lang="en">cultural Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/editorialNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/editorialNote">
+        <rdfs:label xml:lang="en">editorial Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/encyclopedicNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/encyclopedicNote">
+        <rdfs:label xml:lang="en">encyclopedic Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/glossarialNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/glossarialNote">
+        <rdfs:label xml:lang="en">glossarial Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/grammaticalNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/grammaticalNote">
+        <rdfs:label xml:lang="en">grammatical Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasIndicator">
+        <rdfs:label xml:lang="en">has Indicator</rdfs:label>
+        <rdfs:comment xml:lang="en">A short note to give a context to a sense, translation, or an example. Often to distinguish this from others. Only found in bilingual dictionaries.  </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasMarker -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasMarker">
+        <rdfs:label xml:lang="en">has Marker</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasParentEntry -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasParentEntry">
+        <rdfs:label xml:lang="en">has Parent Entry</rdfs:label>
+        <rdfs:comment xml:lang="en">Phrases are normally linked to the main headword. For example, &quot;dog and bone&quot; has parent entry &quot;dog&quot;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasParentPhrasalVerbEntry -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasParentPhrasalVerbEntry">
+        <rdfs:label xml:lang="en">has Parent Phrasal Verb Entry</rdfs:label>
+        <rdfs:comment xml:lang="en">Phrasal verb often have a pointer to the main headword.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasUserInformation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasUserInformation">
+        <rdfs:label xml:lang="en">has User Information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/isDuplicateOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/isDuplicateOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is Duplicate Of</rdfs:label>
+        <rdfs:comment xml:lang="en">For the entries with multiple POS that have been separated (e.g. alguno in Spanish mono)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/prepositionNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/prepositionNote">
+        <rdfs:label xml:lang="en">preposition Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Displaying the common preposition used with a headword.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/referenceNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/referenceNote">
+        <rdfs:label xml:lang="en">reference Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/technicalNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/technicalNote">
+        <rdfs:label xml:lang="en">technical Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/variantSpellingNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/variantSpellingNote">
+        <rdfs:label xml:lang="en">variant Spelling Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/wordFormNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/wordFormNote">
+        <rdfs:label xml:lang="en">word Form Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/utils/createdOn -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/createdOn">
+        <rdfs:label xml:lang="en">created On</rdfs:label>
+        <rdfs:comment xml:lang="en">The date an agent adds an element to the system.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasCapitalizationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasCapitalizationFrequency">
+        <rdfs:label xml:lang="en">has Capitalization Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific capitalized form.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasHyphenationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasHyphenationFrequency">
+        <rdfs:label xml:lang="en">has Hyphenation Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific hyphenated form.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasLexicalFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasLexicalFrequency">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Lexical Frequency</rdfs:label>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasNormalizedFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasNormalizedFrequency">
+        <rdfs:label xml:lang="en">has Normalized Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Frequency of a Entry appearing in OUP corpora.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasOrthographicSpellingFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasOrthographicSpellingFrequency">
+        <rdfs:label xml:lang="en">has Orthographic Spelling Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Rate of occurrence of a specific orthographic spelling form. </rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasTimeStamp">
+        <rdfs:label xml:lang="en">has Time Stamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasUpdatedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasUpdatedDate">
+        <rdfs:label xml:lang="en">has Updated Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/Abstract -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Abstract"/>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/AgentInformation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/utils/AgentInformation">
+        <rdfs:label xml:lang="en">Agent Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Abstract"/>
+        <rdfs:seeAlso>http://purl.org/dc/terms/Agent</rdfs:seeAlso>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

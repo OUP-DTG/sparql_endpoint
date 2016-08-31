@@ -32,6 +32,15 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoPron/hasConsonant -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasConsonant">
+        <rdfs:label xml:lang="en">has Consonant</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasSpellingStructure"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://languagehub.oup.com/OntoPron/hasDOB -->
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasDOB">
@@ -46,6 +55,35 @@
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasHomograph">
         <rdfs:label xml:lang="en">has Homograph</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasClassicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasPhoneticStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasPhoneticStructure">
+        <rdfs:label xml:lang="en">has Phonetic Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasPhoneticsNotation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasPhoneticsNotation">
+        <rdfs:label xml:lang="en">has Phonetics Notation</rdfs:label>
+        <rdfs:comment xml:lang="en">The alphabeti system used to display the phonetic spelling</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasPronunciation -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasPronunciation">
+        <rdfs:label xml:lang="en">has Pronunciation</rdfs:label>
+        <rdfs:seeAlso>http://www.lexinfo.net/ontology/2.0/lexinfo#pronunciation</rdfs:seeAlso>
+        <rdfs:seeAlso>http://dbpedia.org/ontology/pronunciation</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasSpecification"/>
     </owl:ObjectProperty>
     
 
@@ -86,11 +124,55 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoPron/hasSpellingStructure -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasSpellingStructure">
+        <rdfs:label xml:lang="en">has Spelling Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasStressPattern -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasStressPattern">
+        <rdfs:label xml:lang="en">has Stress Pattern</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://languagehub.oup.com/OntoPron/hasSubRegion -->
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasSubRegion">
         <rdfs:label>has Sub Region</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasSyllabification -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasSyllabification">
+        <rdfs:label xml:lang="en">has Syllabification</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasSyllable -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasSyllable">
+        <rdfs:label xml:lang="en">has Syllable</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasPhoneticStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasVowel -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/OntoPron/hasVowel">
+        <rdfs:label xml:lang="en">has Vowel</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoPron/hasSpellingStructure"/>
     </owl:ObjectProperty>
     
 
@@ -146,11 +228,19 @@
     
 
 
-    <!-- http://languagehub.oup.com/OntoPron#hasAudioFile -->
+    <!-- http://languagehub.oup.com/OntoPron/hasAudioFile -->
 
-    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron#hasAudioFile">
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron/hasAudioFile">
         <rdfs:label xml:lang="en">has Audio File</rdfs:label>
         <rdfs:seeAlso>http://schema.org/audio</rdfs:seeAlso>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasHomographNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron/hasHomographNumber">
+        <rdfs:label xml:lang="en">has Homograph Number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -160,6 +250,24 @@
     <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron/hasName">
         <rdfs:label xml:lang="en">has Name</rdfs:label>
         <rdfs:comment xml:lang="en">User&apos;s name registered in the system</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasPhoneticSpelling -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron/hasPhoneticSpelling">
+        <rdfs:label xml:lang="en">has Phonetic Spelling</rdfs:label>
+        <rdfs:comment xml:lang="en">Phonetic spelling is the representation of vocal sounds which express pronunciations of words. It is a system of spelling in which each letter represents invariably the same spoken sound.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/hasPronunciationFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/OntoPron/hasPronunciationFrequency">
+        <rdfs:label xml:lang="en">has Pronunciation Frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">To discover the most frequently used pronunciation. </rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -175,121 +283,12 @@
     
 
 
-    <!-- http://languagehub.oup.com/OntoPron#Coda -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Coda">
-        <rdfs:label xml:lang="en">Coda</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#Syllable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Consonant -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Consonant">
-        <rdfs:label xml:lang="en">Consonant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#LinguisticsPhone"/>
-        <rdfs:comment xml:lang="en">a speech sound that is articulated with complete or partial closure of the vocal tract</rdfs:comment>
-        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Consonant</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
     <!-- http://languagehub.oup.com/OntoPron#Diphthong -->
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Diphthong">
         <rdfs:label xml:lang="en">Diphthong</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#LinguisticsPhone"/>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/LinguisticsPhone"/>
         <rdfs:comment xml:lang="en">Diphthong also known as a gliding vowel, refers to two adjacent vowel sounds occurring within the same syllable. Technically, a diphthong is a vowel with two different targets: that is, the tongue (and/or other parts of the speech apparatus) moves during the pronunciation of the vowel. In most dialects of English, the phrase no highway cowboys /ˌnoʊ ˈhaɪweɪ ˈkaʊbɔɪz/ has five distinct diphthongs, one in every syllable.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#LinguisticsPhone -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#LinguisticsPhone">
-        <rdfs:label xml:lang="en">Linguistics Phone</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#NotationSystem -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#NotationSystem">
-        <rdfs:label xml:lang="en">Notation System</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticAnalysis"/>
-        <rdfs:comment xml:lang="en">Phonetic transcription (aka phonetic script or phonetic notation) is the visual representation of speech sounds (or phones)</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Onset -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Onset">
-        <rdfs:label xml:lang="en">Onset</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#Syllable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#OtherSymbols -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#OtherSymbols">
-        <rdfs:label xml:lang="en">Other Symbols</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#LinguisticsPhone"/>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Rhyme -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Rhyme">
-        <rdfs:label xml:lang="en">Rhyme</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#Syllable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Syllabification -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Syllabification">
-        <rdfs:label xml:lang="en">Syllabification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
-        <rdfs:comment xml:lang="en">the separation of a word into syllables, whether spoken or written</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Syllable -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Syllable">
-        <rdfs:label xml:lang="en">Syllable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
-        <rdfs:comment xml:lang="en">a unit of organization for a sequence of speech sounds</rdfs:comment>
-        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Syllable</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Transcription -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Transcription">
-        <rdfs:label xml:lang="en">Transcription</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticAnalysis"/>
-        <rdfs:seeAlso xml:lang="en">http://purl.org/ontology/mo/Transcription</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">https://schema.org/transcript</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoPron#Vowel -->
-
-    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron#Vowel">
-        <rdfs:label xml:lang="en">Vowel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron#LinguisticsPhone"/>
-        <rdfs:comment xml:lang="en">a sound in spoken language, pronounced with an open vocal tract so that there is no build-up of air pressure at any point above the glottis</rdfs:comment>
-        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Vowel</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -327,6 +326,26 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoPron/Coda -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Coda">
+        <rdfs:label xml:lang="en">Coda</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/Syllable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Consonant -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Consonant">
+        <rdfs:label xml:lang="en">Consonant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/LinguisticsPhone"/>
+        <rdfs:comment xml:lang="en">a speech sound that is articulated with complete or partial closure of the vocal tract</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Consonant</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoPron/Duration -->
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Duration">
@@ -360,7 +379,6 @@
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Female">
         <rdfs:label xml:lang="en">Female</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/AgentGender"/>
-        <owl:disjointWith rdf:resource="http://languagehub.oup.com/OntoPron/Male"/>
     </owl:Class>
     
 
@@ -377,6 +395,15 @@
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/KBPS">
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/SampleRate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/LinguisticsPhone -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/LinguisticsPhone">
+        <rdfs:label xml:lang="en">Linguistics Phone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
     </owl:Class>
     
 
@@ -422,11 +449,39 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoPron/NotationSystem -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/NotationSystem">
+        <rdfs:label xml:lang="en">Notation System</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticAnalysis"/>
+        <rdfs:comment xml:lang="en">Phonetic transcription (aka phonetic script or phonetic notation) is the visual representation of speech sounds (or phones)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoPron/OGG -->
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/OGG">
         <rdfs:label xml:lang="en">F0</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/EncodingFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Onset -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Onset">
+        <rdfs:label xml:lang="en">Onset</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/Syllable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/OtherSymbols -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/OtherSymbols">
+        <rdfs:label xml:lang="en">Other Symbols</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/LinguisticsPhone"/>
     </owl:Class>
     
 
@@ -453,6 +508,15 @@
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/RecordingDate">
         <rdfs:label xml:lang="en">Recording Date</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/AudioFileInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Rhyme -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Rhyme">
+        <rdfs:label xml:lang="en">Rhyme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/Syllable"/>
     </owl:Class>
     
 
@@ -503,12 +567,44 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoPron/Syllabification -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Syllabification">
+        <rdfs:label xml:lang="en">Syllabification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
+        <rdfs:comment xml:lang="en">the separation of a word into syllables, whether spoken or written</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Syllable -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Syllable">
+        <rdfs:label xml:lang="en">Syllable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
+        <rdfs:comment xml:lang="en">a unit of organization for a sequence of speech sounds</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Syllable</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoPron/Tone -->
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Tone">
         <rdfs:label xml:lang="en">Tone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticStructure"/>
         <rdfs:comment xml:lang="en">Tone is the use of pitch in language to distinguish lexical or grammatical meaning – that is, to distinguish or to inflect words.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Transcription -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Transcription">
+        <rdfs:label xml:lang="en">Transcription</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/PhoneticAnalysis"/>
+        <rdfs:seeAlso xml:lang="en">http://purl.org/ontology/mo/Transcription</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://schema.org/transcript</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -526,6 +622,17 @@
 
     <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/UptonIPA">
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/TranscriptionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoPron/Vowel -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/OntoPron/Vowel">
+        <rdfs:label xml:lang="en">Vowel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/OntoPron/LinguisticsPhone"/>
+        <rdfs:comment xml:lang="en">a sound in spoken language, pronounced with an open vocal tract so that there is no build-up of air pressure at any point above the glottis</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">http://purl.org/linguistics/gold/Vowel</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -554,6 +661,12 @@
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/AgentInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasDOB"/>
+                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/OntoPron/AgentDOB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasSpeakerGender"/>
                 <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/OntoPron/AgentGender"/>
             </owl:Restriction>
@@ -562,12 +675,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasName"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasDOB"/>
-                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/OntoPron/AgentDOB"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -598,25 +705,6 @@
 
     <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/PronunciationID">
         <rdfs:label xml:lang="en">Pronunciation ID</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasSubRegion"/>
-                <owl:onClass rdf:resource="http://languagehub.oup.com/OntoPron/SubRegion"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasRecordingDate"/>
-                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/OntoPron/RecordingDate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://languagehub.oup.com/OntoPron/hasSampleRate"/>
-                <owl:someValuesFrom rdf:resource="http://languagehub.oup.com/OntoPron/SampleRate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 

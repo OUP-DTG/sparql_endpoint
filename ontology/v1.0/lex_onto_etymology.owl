@@ -42,6 +42,18 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoEtym/derivesFrom -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/derivesFrom">
+        <rdfs:label xml:lang="en">derives From</rdfs:label>
+        <rdfs:comment xml:lang="en">The etymology can be derived from another etymology.</rdfs:comment>
+        <rdfs:seeAlso>http://purl.org/pav/derivedFrom</rdfs:seeAlso>
+        <inverseOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasDerivative"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/isEtymologicalRelationOf"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://languagehub.oup.com/OntoEtym/ends -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/ends">
@@ -53,7 +65,7 @@
     <!-- http://languagehub.oup.com/OntoEtym/hasDateOfOrigin -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDateOfOrigin">
-        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalInfo"/>
     </ObjectProperty>
     
 
@@ -61,6 +73,7 @@
     <!-- http://languagehub.oup.com/OntoEtym/hasDerivative -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDerivative">
+        <rdfs:label xml:lang="en">has Derivative</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
     </ObjectProperty>
     
@@ -70,20 +83,29 @@
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasDerivedForm">
         <rdfs:label xml:lang="en">has Derived Form</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalInfo"/>
     </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasEtymologicalInfo -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasEtymologicalInfo"/>
     
 
 
     <!-- http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation -->
 
-    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation">
+        <rdfs:label xml:lang="en">has Etymological Relation</rdfs:label>
+    </ObjectProperty>
     
 
 
     <!-- http://languagehub.oup.com/OntoEtym/hasLanguageOfOrigin -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasLanguageOfOrigin">
+        <rdfs:label xml:lang="en">has Language Of Origin</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
     </ObjectProperty>
     
@@ -92,6 +114,7 @@
     <!-- http://languagehub.oup.com/OntoEtym/hasNotableIncident -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasNotableIncident">
+        <rdfs:label xml:lang="en">has Notable Incident</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
     </ObjectProperty>
     
@@ -100,6 +123,7 @@
     <!-- http://languagehub.oup.com/OntoEtym/hasOrigin -->
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasOrigin">
+        <rdfs:label xml:lang="en">has Origin</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
     </ObjectProperty>
     
@@ -109,14 +133,46 @@
 
     <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasPlaceOfOrigin">
         <rdfs:label xml:lang="en">has Place Of Origin</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalInfo"/>
     </ObjectProperty>
     
 
 
-    <!-- http://languagehub.oup.com/UpperOntology/hasEtymology -->
+    <!-- http://languagehub.oup.com/OntoEtym/isEtymologicalRelationOf -->
 
-    <ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasEtymology"/>
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/isEtymologicalRelationOf">
+        <rdfs:label xml:lang="en">is Etymological Relation Of</rdfs:label>
+        <inverseOf rdf:resource="http://languagehub.oup.com/OntoEtym/hasEtymologicalRelation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/isOriginOf -->
+
+    <ObjectProperty rdf:about="http://languagehub.oup.com/OntoEtym/isOriginOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">is Origin Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/OntoEtym/isEtymologicalRelationOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/OntoEtym/hasEtymology -->
+
+    <DatatypeProperty rdf:about="http://languagehub.oup.com/OntoEtym/hasEtymology">
+        <rdfs:label xml:lang="en">has Etymology</rdfs:label>
+    </DatatypeProperty>
     
 
 
@@ -156,7 +212,6 @@
     <Class rdf:about="http://languagehub.oup.com/OntoEtym/EntryOrigin">
         <rdfs:label xml:lang="en">Entry Origin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Etymology"/>
-        <disjointWith rdf:resource="http://languagehub.oup.com/OntoEtym/NotableIncident"/>
         <rdfs:comment xml:lang="en">a summary of the origin of the Entry</rdfs:comment>
     </Class>
     

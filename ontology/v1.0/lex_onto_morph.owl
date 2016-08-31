@@ -13,12 +13,12 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:OntoMorph="http://languagehub.oup.com/OntoMorph/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ontology="http://languagehub.oup.com/ontology/"
-     xmlns:OntoMorph="http://languagehub.oup.com/OntoMorph/">
+     xmlns:ontology="http://languagehub.oup.com/ontology/">
     <Ontology rdf:about="http://languagehub.oup.com/OntoMorph">
         <versionIRI rdf:resource="&OntoMorph;0.1"/>
     </Ontology>
@@ -1722,6 +1722,24 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoMorph/Factitive -->
+
+    <Class rdf:about="&OntoMorph;Factitive">
+        <rdfs:label xml:lang="en">Factitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;FactivityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/FactivityType -->
+
+    <Class rdf:about="&OntoMorph;FactivityType">
+        <rdfs:label xml:lang="en">Factivity Type</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+    </Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoMorph/Feminine -->
 
     <Class rdf:about="&OntoMorph;Feminine">
@@ -2178,6 +2196,15 @@ mud.</rdfs:comment>
     
 
 
+    <!-- http://languagehub.oup.com/OntoMorph/NonFactitive -->
+
+    <Class rdf:about="&OntoMorph;NonFactitive">
+        <rdfs:label xml:lang="en">non Factitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;FactivityType"/>
+    </Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoMorph/NonFiniteness -->
 
     <Class rdf:about="&OntoMorph;NonFiniteness">
@@ -2284,6 +2311,15 @@ mud.</rdfs:comment>
         <rdfs:label xml:lang="en">Onomatopoeia</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;IdeophoneType"/>
         <rdfs:comment xml:lang="en">Ideophones are lexical units that evoke a vivid impression of certain sensations or sensory perceptions (e.g. sound meow for a cat), movement, color (e.g., English  bling, describing the glinting of light on things like gold), shape, action (ta-da!), etc. It is a lexical class based on the special relation between form and meaning. In some languages, ideophones correspond to common POS classes (e.g., adjectives, adverbs, etc.), but in others they are an independent POS.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Optative -->
+
+    <Class rdf:about="&OntoMorph;Optative">
+        <rdfs:label xml:lang="en">Optative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;MoodType"/>
     </Class>
     
 
