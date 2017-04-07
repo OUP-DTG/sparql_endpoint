@@ -24,6 +24,67 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://languagehub.oup.com/utils/copyrightedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/copyrightedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/createdBy -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/createdBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/creationDate -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/creationDate">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/editedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/editedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/lastEditDate -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/lastEditDate">
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/versionNumber -->
+
+    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/utils/versionNumber">
+        <rdfs:label xml:lang="en">Version Number</rdfs:label>
+        <rdfs:comment xml:lang="en">We are tracking the version number of the dataset that we have in the triplestore. This number resembels 20170222144056-0.2-86af478 </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -36,6 +97,10 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/culturalNote">
         <rdfs:label xml:lang="en">cultural Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Gives information about a word or phrase that may be unfamiliar in another culture – typically found in bilingual dictionaries.
+E.g. Spanish-English churro has the cultural note “A typical Spanish food, consisting of a long thin cylinder of dough, deep-fried in olive oil and often dusted with sugar. Churros are usually eaten with a thick hot drinking chocolate, especially for breakfast.”
+
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -45,6 +110,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/editorialNote">
         <rdfs:label xml:lang="en">editorial Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Adds extra information about how to use a word (e.g. how to use a word “correctly” or without causing offense).
+E.g. ODE literally has the editorialNote “In its standard use literally means ‘in a literal sense, as opposed to a non-literal or exaggerated sense’ etc.”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -54,6 +122,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/encyclopedicNote">
         <rdfs:label xml:lang="en">encyclopedic Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Adds encyclopedic information to an entry, especially for proper nouns.
+E.g. ODE Afghanistan has the encyclopedic note “Part of the Indian Mogul empire, Afghanistan became independent in the mid 18th century etc.”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -68,10 +139,22 @@
     
 
 
+    <!-- http://languagehub.oup.com/utils/grammaticalFeatureNote -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/grammaticalFeatureNote">
+        <rdfs:label xml:lang="en">grammatical Feature Note</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://languagehub.oup.com/utils/grammaticalNote -->
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/grammaticalNote">
         <rdfs:label xml:lang="en">grammatical Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Provides grammatical information about a sense, definition, translation, example etc.
+E.g. ODE dine verb section has the grammatical note “no object”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -81,7 +164,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/hasIndicator">
         <rdfs:label xml:lang="en">has Indicator</rdfs:label>
-        <rdfs:comment xml:lang="en">A short note to give a context to a sense, translation, or an example. Often to distinguish this from others. Only found in bilingual dictionaries.  </rdfs:comment>
+        <rdfs:comment xml:lang="en">Provides context to a particular translation, definition, example etc.
+E.g. in English-Spanish hen, the translation “gallina” has the indicator “chicken”, and the translation “hembra” has the indicator “female bird”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -135,7 +220,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/prepositionNote">
         <rdfs:label xml:lang="en">preposition Note</rdfs:label>
-        <rdfs:comment xml:lang="en">Displaying the common preposition used with a headword.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Lists the prepositions or constructions that typically follow a word (and how to translate them).
+E.g. English-Romanian accessible: “accessible” takes English preposition “to”, which is translated in Romanian as “pentru”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -145,6 +232,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/referenceNote">
         <rdfs:label xml:lang="en">reference Note</rdfs:label>
+        <rdfs:comment xml:lang="en">A reference to another section of the dictionary.
+E.g. Swahili -ake refers to a table in the back matter of the dictionary.
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -154,6 +244,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/technicalNote">
         <rdfs:label xml:lang="en">technical Note</rdfs:label>
+        <rdfs:comment xml:lang="en">Adds technical information to a definition.
+E.g. ODE mongoose has the definition “A small carnivorous mammal with a long body and tail and a grizzled or banded coat, native to Africa and Asia” followed by a technical note “Family Herpestidae (or Viverridae): several genera, in particular Herpestes, and many species.”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -163,6 +256,8 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/variantSpellingNote">
         <rdfs:label xml:lang="en">variant Spelling Note</rdfs:label>
+        <rdfs:comment xml:lang="en">[Doesn’t exist yet. For occasions that we need to explain the variant spelling]
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -172,6 +267,9 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/utils/wordFormNote">
         <rdfs:label xml:lang="en">word Form Note</rdfs:label>
+        <rdfs:comment xml:lang="en">A replacement or alternative to the heading in a particular sense or senses.
+E.g. ODE advent: the form “Advent” replaces the headword in the sense “The first season of the Church year, leading up to Christmas”
+</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/utils/hasMarker"/>
     </owl:ObjectProperty>
     
@@ -215,6 +313,15 @@
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/hasCloseMatchOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasCloseMatchOrder">
+        <rdfs:label xml:lang="en">has Close Match Order</rdfs:label>
+        <rdfs:comment xml:lang="en">The exact order that closeMatch appears in the dictionary.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -319,6 +426,15 @@
 
     <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/hasUpdatedDate">
         <rdfs:label xml:lang="en">has Updated Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/utils/isConstruct -->
+
+    <owl:DatatypeProperty rdf:about="http://languagehub.oup.com/utils/isConstruct">
+        <rdfs:label xml:lang="en">is Construct</rdfs:label>
+        <rdfs:comment xml:lang="en">To distinguish between a normal example and a construct that is converted into an example</rdfs:comment>
     </owl:DatatypeProperty>
     
 

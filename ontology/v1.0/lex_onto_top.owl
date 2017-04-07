@@ -16,11 +16,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://languagehub.oup.com/UpperOntology/">
-        <editedBy>Artemis Parvizi</editedBy>
-        <editedBy>Matt Kohl</editedBy>
-        <creationDate>1 April 2015</creationDate>
-        <createdBy>Artemis Parvizi</createdBy>
-        <copyRight>Oxford University Press</copyRight>
         <editDate>31 August 2016</editDate>
         <owl:imports rdf:resource="http://languagehub.oup.com/OntoMorph"/>
         <owl:imports rdf:resource="http://languagehub.oup.com/OntoPron"/>
@@ -28,65 +23,6 @@
         <owl:versionIRI rdf:resource="http://languagehub.oup.com/UpperOntology/1.0.0"/>
         <owl:imports rdf:resource="http://languagehub.oup.com/utils/"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/copyRight -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/copyRight">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/createdBy -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/createdBy">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/creationDate -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/creationDate">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/editedBy -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/editedBy">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/lastEditDate -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/lastEditDate">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://languagehub.oup.com/UpperOntology/versionNumber -->
-
-    <owl:AnnotationProperty rdf:about="http://languagehub.oup.com/UpperOntology/versionNumber">
-        <rdfs:subPropertyOf rdf:resource="&owl;versionInfo"/>
-    </owl:AnnotationProperty>
     
 
 
@@ -299,6 +235,7 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasCrossReference">
         <rdfs:label xml:lang="en">has Cross Reference</rdfs:label>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isCrossReferenceOf"/>
     </owl:ObjectProperty>
     
 
@@ -633,6 +570,7 @@
         <rdfs:label xml:lang="en">has Normalised Form</rdfs:label>
         <rdfs:comment xml:lang="en">The canonical form without diacritics (normalised unicode)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasLexicalForm"/>
+        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/isNormalisedFormOf"/>
     </owl:ObjectProperty>
     
 
@@ -642,6 +580,16 @@
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasObjectCollocate">
         <rdfs:label xml:lang="en">has Object Collocate</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasCollocate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/hasOppositeOf -->
+
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasOppositeOf">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has Opposite Of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasCrossReference"/>
     </owl:ObjectProperty>
     
 
@@ -689,6 +637,7 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/hasPrimarySource">
         <rdfs:label xml:lang="en">has Primary Source</rdfs:label>
+        <rdfs:comment xml:lang="en">This property defines the dataset source of each entry.</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">prov:hadPrimarySource (http://www.w3.org/TR/prov-o/)</rdfs:seeAlso>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasProvenance"/>
     </owl:ObjectProperty>
@@ -885,9 +834,7 @@
 
     <!-- http://languagehub.oup.com/UpperOntology/isCrossReferenceOf -->
 
-    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isCrossReferenceOf">
-        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasCrossReference"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isCrossReferenceOf"/>
     
 
 
@@ -922,7 +869,6 @@
 
     <owl:ObjectProperty rdf:about="http://languagehub.oup.com/UpperOntology/isNormalisedFormOf">
         <rdfs:label xml:lang="en">is Normalised Form Of</rdfs:label>
-        <owl:inverseOf rdf:resource="http://languagehub.oup.com/UpperOntology/hasNormalisedForm"/>
         <rdfs:subPropertyOf rdf:resource="http://languagehub.oup.com/UpperOntology/isLexicalFormOf"/>
     </owl:ObjectProperty>
     
@@ -1176,6 +1122,16 @@
     
 
 
+    <!-- http://languagehub.oup.com/UpperOntology/Abbreviation -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Abbreviation">
+        <rdfs:label xml:lang="en">Abbreviation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LexicalCategory"/>
+        <rdfs:comment xml:lang="en">Used for the headwords that are an abbreviation. </rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://languagehub.oup.com/UpperOntology/Abstract -->
 
     <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/Abstract"/>
@@ -1340,6 +1296,14 @@
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LinguisticAnnotation"/>
         <rdfs:comment xml:lang="en">A regional, temporal or social variety of a language, differing in pronunciation, grammar and vocabulary from the standard language,which is in itself a socially favoured dialect. (GOLD 2010)</rdfs:comment>
         <rdfs:seeAlso>http://purl.org/linguistics/gold/Dialect</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/EncyclopedicCategory -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/EncyclopedicCategory">
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LinguisticAnnotation"/>
     </owl:Class>
     
 
@@ -1814,6 +1778,14 @@
         <rdfs:label xml:lang="en">Right Parenthetical Punctuation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/Punctuation"/>
         <rdfs:comment xml:lang="en">Right parenthetical punctuation mark, e.g., ), }</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://languagehub.oup.com/UpperOntology/SemanticCategory -->
+
+    <owl:Class rdf:about="http://languagehub.oup.com/UpperOntology/SemanticCategory">
+        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/LinguisticAnnotation"/>
     </owl:Class>
     
 

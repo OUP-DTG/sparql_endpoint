@@ -1644,6 +1644,15 @@
     
 
 
+    <!-- http://languagehub.oup.com/OntoMorph/Enumerative -->
+
+    <Class rdf:about="&OntoMorph;Enumerative">
+        <rdfs:label xml:lang="en">Enumerative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
+    </Class>
+    
+
+
     <!-- http://languagehub.oup.com/OntoMorph/Epistemic -->
 
     <Class rdf:about="&OntoMorph;Epistemic">
@@ -1698,7 +1707,8 @@
     <Class rdf:about="&OntoMorph;Exclusive">
         <rdfs:label xml:lang="en">Exclusive</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;PronounScopeType"/>
-        <rdfs:comment xml:lang="en">First person plural pronouns referring to the speaker and other individuals who are not the addressees.</rdfs:comment>
+        <rdfs:comment xml:lang="en">In first person plural pronouns, referring to the speaker and other individuals who are not the addressee.  
+In third person pronouns, it expresses &apos;only X&apos; (e.g., only she).</rdfs:comment>
     </Class>
     
 
@@ -1726,16 +1736,7 @@
 
     <Class rdf:about="&OntoMorph;Factitive">
         <rdfs:label xml:lang="en">Factitive</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&OntoMorph;FactivityType"/>
-    </Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoMorph/FactivityType -->
-
-    <Class rdf:about="&OntoMorph;FactivityType">
-        <rdfs:label xml:lang="en">Factivity Type</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
     </Class>
     
 
@@ -1910,7 +1911,8 @@
     <Class rdf:about="&OntoMorph;Inclusive">
         <rdfs:label xml:lang="en">Inclusive</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;PronounScopeType"/>
-        <rdfs:comment xml:lang="en">First person plural pronouns referring to the speaker and the addressees.</rdfs:comment>
+        <rdfs:comment xml:lang="en">In first person plural pronouns, referring to the speaker and the addressee, in addition to potentially other individuals. 
+In third person pronouns, it expresses &apos;all of X&apos; (e.g., all three of them)</rdfs:comment>
     </Class>
     
 
@@ -1956,6 +1958,15 @@
     <Class rdf:about="&OntoMorph;Inferential">
         <rdfs:label xml:lang="en">Inferential</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;EvidentialityType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Infinitive -->
+
+    <Class rdf:about="&OntoMorph;Infinitive">
+        <rdfs:label xml:lang="en">Infinitive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NonFinitenessType"/>
     </Class>
     
 
@@ -2192,15 +2203,6 @@ mud.</rdfs:comment>
         <rdfs:label xml:lang="en">Non Collective</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;CollectivenessType"/>
         <rdfs:comment xml:lang="en">For Arabic (and presumably other languages manifesting the distinction) this is the default value if no information is speciffied.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- http://languagehub.oup.com/OntoMorph/NonFactitive -->
-
-    <Class rdf:about="&OntoMorph;NonFactitive">
-        <rdfs:label xml:lang="en">non Factitive</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&OntoMorph;FactivityType"/>
     </Class>
     
 
@@ -2620,7 +2622,7 @@ mud.</rdfs:comment>
     <!-- http://languagehub.oup.com/OntoMorph/PronominalType -->
 
     <Class rdf:about="&OntoMorph;PronominalType">
-        <rdfs:label>Pronominal</rdfs:label>
+        <rdfs:label xml:lang="en">Pronominal</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://languagehub.oup.com/UpperOntology/GrammaticalFeature"/>
         <rdfs:comment xml:lang="en">Distinctions concerning different types of pronouns and by extension too to verbs, as in some languages verbs take different types of pronouns as part of their lemma and are subsequently classified based on that (e.g., Catalan reflexive verb adonar-se, &apos;realize&apos;).</rdfs:comment>
     </Class>
@@ -2670,6 +2672,15 @@ mud.</rdfs:comment>
     <Class rdf:about="&OntoMorph;Punctual">
         <rdfs:label xml:lang="en">Punctual</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;AspectDurationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Quantitative -->
+
+    <Class rdf:about="&OntoMorph;Quantitative">
+        <rdfs:label xml:lang="en">Quantitative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;ReferentialType"/>
     </Class>
     
 
@@ -3034,6 +3045,16 @@ Note: The term thematic role is being used here is a slightly broader sense than
     <Class rdf:about="&OntoMorph;TransitiveSubCat">
         <rdfs:label xml:lang="en">Transitive</rdfs:label>
         <rdfs:subClassOf rdf:resource="&OntoMorph;SubcategorizationType"/>
+    </Class>
+    
+
+
+    <!-- http://languagehub.oup.com/OntoMorph/Trial -->
+
+    <Class rdf:about="&OntoMorph;Trial">
+        <rdfs:label xml:lang="en">Trial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&OntoMorph;NumberType"/>
+        <rdfs:comment xml:lang="en">Grammatical number distinction present in some languages. Interpreted as referring to three entities.</rdfs:comment>
     </Class>
     
 
